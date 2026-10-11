@@ -191,8 +191,13 @@
     ]
   },
   "fun": {
-    "title": "Off the clock",
-    "intro": "The stuff that doesn't fit in a portfolio category.",
+    "title": "About me",
+    "image": "",
+    "imageAlt": "Photo of me",
+    "bio": [
+      "Write a few sentences about yourself here: who you are, where you're from, and what got you into building, music and art.",
+      "Add a second paragraph if you want, or delete this line."
+    ],
     "items": [
       { "label": "Co-developer", "value": "My cat, who regularly adds code to my keyboard." },
       { "label": "Listening to", "value": "Edit this: what's on repeat lately?" },

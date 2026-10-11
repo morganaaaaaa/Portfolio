@@ -227,13 +227,22 @@
     var at = $('about-text');
     (about.paragraphs || []).forEach(function (t) { at.appendChild(el('p', null, t)); });
 
-    // Off the clock
+    // About me (photo, bio, fun cards) near the top
     var fun = d.fun || {};
-    if ((fun.items || []).length) {
+    if ((fun.items || []).length || (fun.bio || []).length || fun.image) {
       $('fun').hidden = false;
-      $('fun-title').textContent = fun.title || 'Off the clock';
-      $('fun-intro').textContent = fun.intro || '';
-      fun.items.forEach(function (it) {
+      $('fun-title').textContent = fun.title || 'About me';
+      var ph = $('me-photo');
+      if (fun.image) {
+        var pi = el('img');
+        pi.src = safeUrl(fun.image);
+        pi.alt = fun.imageAlt || 'Photo';
+        ph.appendChild(pi);
+      } else {
+        ph.appendChild(el('span', null, 'Your photo here'));
+      }
+      (fun.bio || []).forEach(function (t) { $('me-bio').appendChild(el('p', null, t)); });
+      (fun.items || []).forEach(function (it) {
         var c = el('div', 'fun-item');
         c.appendChild(el('small', null, it.label));
         c.appendChild(el('span', null, it.value));

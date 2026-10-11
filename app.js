@@ -127,7 +127,6 @@
     var site = d.site || {};
     var disciplines = d.disciplines || [];
     var projects = d.projects || [];
-    var sections = {};
 
     if (d.notice) { $('notice').textContent = d.notice; $('notice').hidden = false; }
 
@@ -144,7 +143,6 @@
     disciplines.forEach(function (x) {
       var sec = el('section');
       sec.id = x.id;
-      sections[x.id] = sec;
 
       var head = el('div', 'sec-head');
       var left = el('div', 'sec-title');
@@ -166,23 +164,6 @@
       sec.appendChild(grid);
       secBox.appendChild(sec);
     });
-
-    // Tiles under the intro jump to each section
-    var tiles = $('disciplines');
-    disciplines.forEach(function (x) {
-      var n = projects.filter(function (p) { return (p.type || 'roblox') === x.id; }).length;
-      var t = el('button', 'tile');
-      t.type = 'button';
-      t.appendChild(el('b', null, x.label));
-      t.appendChild(el('span', 'blurb', x.blurb || ''));
-      t.appendChild(el('small', null, x.tools || ''));
-      t.appendChild(el('span', 'count', n + (n === 1 ? ' project' : ' projects')));
-      t.addEventListener('click', function () {
-        sections[x.id].scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-      tiles.appendChild(t);
-    });
-    if (!disciplines.length) tiles.hidden = true;
 
     // Stats
     var stats = $('stats');

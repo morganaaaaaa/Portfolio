@@ -2,28 +2,27 @@
   "notice": "I am constantly trying to update the content on this site, thanks!",
   "site": {
     "name": "saintsblades",
-    "eyebrow": "Roblox developer, musical and digital artist",
-    "headline": "Worlds, assets and interfaces for Roblox games.",
-    "lede": "I build environments in Roblox Studio, model and animate custom assets, and design game UI that reads clearly on phone, console and PC. Open for commissions and long-term team work.",
+    "eyebrow": "Roblox developer · digital artist · musician",
+    "headline": "Roblox worlds, digital art and original music.",
+    "lede": "I build games and environments in Roblox Studio, paint digital art in Procreate, and produce music in FL Studio. Open for commissions in all three.",
     "footerLeft": "© 2026 saintsblades",
     "footerRight": "Created with Roblox Studio, Blender, FL Studio, and Procreate"
   },
+  "disciplines": [
+    { "id": "roblox", "label": "Roblox", "blurb": "Building, modeling, animation and UI for games.", "tools": "Roblox Studio · Blender" },
+    { "id": "art", "label": "Digital art", "blurb": "Illustration, character design and game thumbnails.", "tools": "Procreate" },
+    { "id": "music", "label": "Music", "blurb": "Game soundtracks, loops and original tracks.", "tools": "FL Studio" }
+  ],
   "stats": [
     { "value": "4 yrs", "label": "In Roblox Studio" },
     { "value": "18", "label": "Shipped places" },
-    { "value": "2.4M", "label": "Total visits" },
-    { "value": "9", "label": "Dev teams" }
-  ],
-  "filters": [
-    { "id": "build", "label": "Building" },
-    { "id": "model", "label": "Modeling" },
-    { "id": "anim", "label": "Animation" },
-    { "id": "ui", "label": "UI" }
+    { "value": "120+", "label": "Finished artworks" },
+    { "value": "40", "label": "Tracks produced" }
   ],
   "projects": [
     {
+      "type": "roblox",
       "title": "Harbor Town",
-      "categories": ["build"],
       "tags": ["Building", "Lighting"],
       "description": "Seaside hub map for a roleplay game, with 14 enterable interiors and a day/night lighting cycle.",
       "meta": "Map: 1,024 × 1,024 studs",
@@ -33,8 +32,8 @@
       "tint": "a"
     },
     {
+      "type": "roblox",
       "title": "Weapon Pack Vol. 1",
-      "categories": ["model"],
       "tags": ["Modeling", "Blender"],
       "description": "Twelve low-poly melee and ranged weapons with hand-painted textures, ready to drop into any combat system.",
       "meta": "Under 2,000 tris each",
@@ -44,9 +43,9 @@
       "tint": "b"
     },
     {
+      "type": "roblox",
       "title": "Pet Sim Inventory",
-      "categories": ["ui"],
-      "tags": ["UI", "Figma"],
+      "tags": ["UI", "Game design"],
       "description": "Inventory, shop and trading screens that scale from a phone to a 4K monitor without clipping.",
       "meta": "Mobile-first layout",
       "linkText": "Play on Roblox",
@@ -55,8 +54,8 @@
       "tint": "c"
     },
     {
+      "type": "roblox",
       "title": "Boss Fight Cinematic",
-      "categories": ["anim"],
       "tags": ["Animation", "Moon Animator"],
       "description": "A 40-second cutscene with a rigged boss, camera work and synced sound effects.",
       "meta": "R15 and custom rig",
@@ -66,57 +65,107 @@
       "tint": "a"
     },
     {
-      "title": "Frostpeak Lobby",
-      "categories": ["build", "model"],
-      "tags": ["Building", "Modeling"],
-      "description": "Winter lobby with modeled props, snow particle effects and a spawn area built for 50-player servers.",
-      "meta": "Streaming enabled",
-      "linkText": "Play on Roblox",
-      "linkUrl": "https://www.roblox.com",
+      "type": "art",
+      "title": "Night Market",
+      "tags": ["Illustration", "Procreate"],
+      "description": "A rainy street market lit by paper lanterns, painted for a game's loading screen.",
+      "meta": "3000 × 4000 px · 2026",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "",
+      "tint": "c"
+    },
+    {
+      "type": "art",
+      "title": "Character Sheet: Kael",
+      "tags": ["Character design", "Procreate"],
+      "description": "Front, side and back views plus expression sheet for a swordsman character.",
+      "meta": "4000 × 3000 px · 2026",
+      "linkText": "",
+      "linkUrl": "",
       "image": "",
       "tint": "b"
     },
     {
-      "title": "Obby HUD Redesign",
-      "categories": ["ui"],
-      "tags": ["UI", "Game design"],
-      "description": "Checkpoint timer, stage counter and settings menu. Retention on the first session rose after the update.",
-      "meta": "Before and after",
-      "linkText": "Case study",
-      "linkUrl": "#",
+      "type": "art",
+      "title": "Game Thumbnail Set",
+      "tags": ["Thumbnails", "Branding"],
+      "description": "Thumbnails and icons for three Roblox games, made to stay readable at small sizes.",
+      "meta": "1920 × 1080 px each",
+      "linkText": "See the games",
+      "linkUrl": "https://www.roblox.com",
+      "image": "",
+      "tint": "a"
+    },
+    {
+      "type": "music",
+      "title": "Frostpeak Theme",
+      "tags": ["Game soundtrack", "FL Studio"],
+      "description": "Looping lobby theme with bells and soft synth pads, written for a winter map.",
+      "meta": "128 BPM · D minor · 2:40",
+      "audio": "",
+      "embed": "",
+      "linkText": "Listen on SoundCloud",
+      "linkUrl": "https://soundcloud.com",
+      "image": "",
+      "tint": "b"
+    },
+    {
+      "type": "music",
+      "title": "Neon Harbor",
+      "tags": ["Synthwave", "FL Studio"],
+      "description": "A night-drive track with a driving bassline and a long synth lead.",
+      "meta": "118 BPM · A minor · 3:15",
+      "audio": "",
+      "embed": "",
+      "linkText": "Listen on SoundCloud",
+      "linkUrl": "https://soundcloud.com",
+      "image": "",
+      "tint": "a"
+    },
+    {
+      "type": "music",
+      "title": "Boss Fight Loop",
+      "tags": ["Hybrid orchestral", "FL Studio"],
+      "description": "A tense, percussive loop built to repeat cleanly for the length of a boss fight.",
+      "meta": "150 BPM · F minor · 1:30 loop",
+      "audio": "",
+      "embed": "",
+      "linkText": "Listen on SoundCloud",
+      "linkUrl": "https://soundcloud.com",
       "image": "",
       "tint": "c"
     }
   ],
   "skills": [
     {
-      "group": "Building",
-      "sub": "Roblox Studio",
+      "group": "Roblox development",
+      "sub": "Roblox Studio, Blender, Moon Animator",
       "items": [
-        { "name": "Terrain and landscaping", "level": "Expert" },
-        { "name": "Interior and architecture", "level": "Expert" },
-        { "name": "Lighting and atmosphere", "level": "Advanced" },
-        { "name": "Part count optimization", "level": "Advanced" }
+        { "name": "Environments and building", "level": "Expert" },
+        { "name": "Low-poly modeling", "level": "Advanced" },
+        { "name": "UI and game design", "level": "Advanced" },
+        { "name": "Cutscenes and animation", "level": "Advanced" }
       ]
     },
     {
-      "group": "Modeling and animation",
-      "sub": "Blender, Moon Animator",
+      "group": "Digital art",
+      "sub": "Procreate",
       "items": [
-        { "name": "Low-poly props and assets", "level": "Expert" },
-        { "name": "Texturing", "level": "Advanced" },
-        { "name": "Rigging", "level": "Intermediate" },
-        { "name": "Cutscenes", "level": "Advanced" }
+        { "name": "Illustration", "level": "Advanced" },
+        { "name": "Character design", "level": "Advanced" },
+        { "name": "Game thumbnails and icons", "level": "Expert" },
+        { "name": "Color and lighting", "level": "Advanced" }
       ]
     },
     {
-      "group": "UI and game design",
-      "sub": "Figma, Roblox UI",
+      "group": "Music production",
+      "sub": "FL Studio",
       "items": [
-        { "name": "HUD and menu layouts", "level": "Expert" },
-        { "name": "Responsive scaling", "level": "Advanced" },
-        { "name": "Game loop design", "level": "Advanced" },
-        { "name": "Playtesting", "level": "Advanced" }
+        { "name": "Game soundtracks", "level": "Advanced" },
+        { "name": "Loops and ambience", "level": "Advanced" },
+        { "name": "Sound design", "level": "Intermediate" },
+        { "name": "Mixing and mastering", "level": "Intermediate" }
       ]
     }
   ],
@@ -126,12 +175,14 @@
     "availableNote": "Typical turnaround is 1 to 3 weeks depending on scope. Payment in Robux or USD.",
     "paragraphs": [
       "I started building in Roblox Studio in 2022 and have worked with small teams and solo developers ever since. I care most about maps that guide players without signs and interfaces that stay readable on a small screen.",
-      "Write a few sentences here about how you work, the kinds of games you like making, and what a client can expect from you."
+      "Write a few sentences here about how your Roblox work, art and music fit together, and what a client can expect from you."
     ]
   },
   "contact": [
     { "label": "Discord", "value": "yourname", "type": "copy" },
     { "label": "Email", "value": "you@example.com", "type": "copy" },
-    { "label": "Roblox profile", "value": "roblox.com/users/your-id", "type": "link", "href": "https://www.roblox.com", "linkText": "Open profile" }
+    { "label": "Roblox profile", "value": "roblox.com/users/your-id", "type": "link", "href": "https://www.roblox.com", "linkText": "Open profile" },
+    { "label": "Music", "value": "soundcloud.com/your-name", "type": "link", "href": "https://soundcloud.com", "linkText": "Open SoundCloud" },
+    { "label": "Art", "value": "instagram.com/your-name", "type": "link", "href": "https://www.instagram.com", "linkText": "Open profile" }
   ]
 }

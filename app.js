@@ -9,27 +9,70 @@
     return n;
   }
 
-  // Only allow normal web links, in-page anchors and relative paths.
+  // Allows web links, in-page anchors and plain relative file names like
+  // "harbor-town.png" or "images/harbor-town.png". Blocks javascript: and similar.
   function safeUrl(u) {
     u = String(u || '').trim();
-    if (u === '' ) return '#';
-    if (/^(https?:\/\/|#|\.?\/|[a-z0-9_\-]+\/)/i.test(u) && !/^\s*javascript:/i.test(u)) return u;
-    return '#';
+    if (u === '') return '#';
+    if (/^[a-z][a-z0-9+.\-]*:/i.test(u) && !/^https?:/i.test(u)) return '#';
+    return u;
+  }
+
+  // Only embed players from music and video sites.
+  var EMBED_HOSTS = ['open.spotify.com', 'w.soundcloud.com', 'www.youtube.com', 'www.youtube-nocookie.com', 'bandcamp.com'];
+  function embedUrl(u) {
+    try {
+      var x = new URL(String(u || '').trim());
+      if (x.protocol === 'https:' && EMBED_HOSTS.indexOf(x.hostname) !== -1) return x.href;
+    } catch (e) { /* not a valid URL */ }
+    return '';
+  }
+
+  var labels = {};
+  var cards = [];
+  var current = 'all';
+
+  // Lightbox for artwork
+  var dlg = $('lightbox');
+  function openLightbox(src, title) {
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    $('lightbox-img').src = src;
+    $('lightbox-img').alt = title || '';
+    $('lightbox-caption').textContent = title || '';
+    dlg.showModal();
+  }
+  if (dlg) {
+    $('lightbox-close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   }
 
   function renderProject(p) {
-    var card = el('article', 'card');
-    card.setAttribute('data-cat', (p.categories || []).join(' '));
+    var type = p.type || 'roblox';
+    var card = el('article', 'card ' + type);
+    card.setAttribute('data-type', type);
 
-    var shot = el('div', 'shot' + (p.tint === 'b' ? ' b' : p.tint === 'c' ? ' c' : ''));
+    var tint = p.tint === 'b' ? ' b' : p.tint === 'c' ? ' c' : '';
+    var shot = el('div', 'shot' + tint);
+    shot.appendChild(el('em', 'badge', labels[type] || type));
+
     if (p.image) {
+      var src = safeUrl(p.image);
       var img = el('img');
-      img.src = safeUrl(p.image);
+      img.src = src;
       img.alt = p.title || '';
       img.loading = 'lazy';
-      shot.appendChild(img);
+      if (type === 'art') {
+        var zoom = el('button', 'zoom');
+        zoom.type = 'button';
+        zoom.setAttribute('aria-label', 'View ' + (p.title || 'artwork') + ' larger');
+        zoom.appendChild(img);
+        zoom.addEventListener('click', function () { openLightbox(src, p.title); });
+        shot.appendChild(zoom);
+      } else {
+        shot.appendChild(img);
+      }
     } else {
-      shot.appendChild(el('span', null, 'Screenshot 16:9'));
+      shot.appendChild(el('span', null, type === 'art' ? 'Artwork' : type === 'music' ? 'Cover art' : 'Screenshot'));
     }
     card.appendChild(shot);
 
@@ -40,17 +83,48 @@
     body.appendChild(el('h3', null, p.title));
     body.appendChild(el('p', null, p.description));
 
+    if (type === 'music') {
+      var audioSrc = p.audio ? safeUrl(p.audio) : '';
+      var frame = embedUrl(p.embed);
+      if (audioSrc && audioSrc !== '#') {
+        var a = el('audio', 'player');
+        a.controls = true;
+        a.preload = 'none';
+        a.src = audioSrc;
+        body.appendChild(a);
+      } else if (frame) {
+        var f = el('iframe', 'embed');
+        f.src = frame;
+        f.title = (p.title || 'Track') + ' player';
+        f.loading = 'lazy';
+        f.height = String(p.embedHeight || 152);
+        f.setAttribute('allow', 'encrypted-media');
+        f.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups');
+        body.appendChild(f);
+      }
+    }
+
     var meta = el('div', 'meta');
     meta.appendChild(el('span', null, p.meta || ''));
-    if (p.linkText) {
-      var a = el('a', null, p.linkText);
-      a.href = safeUrl(p.linkUrl);
-      if (/^https?:/i.test(a.href) && a.getAttribute('href') !== '#') { a.target = '_blank'; a.rel = 'noopener'; }
-      meta.appendChild(a);
+    if (p.linkText && p.linkUrl) {
+      var l = el('a', null, p.linkText);
+      l.href = safeUrl(p.linkUrl);
+      if (/^https?:/i.test(l.href)) { l.target = '_blank'; l.rel = 'noopener'; }
+      meta.appendChild(l);
     }
     body.appendChild(meta);
     card.appendChild(body);
     return card;
+  }
+
+  function setFilter(id) {
+    current = id;
+    document.querySelectorAll('#filters button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-filter') === id ? 'true' : 'false');
+    });
+    cards.forEach(function (c) {
+      c.hidden = !(id === 'all' || c.getAttribute('data-type') === id);
+    });
   }
 
   function copyText(text, btn) {
@@ -62,16 +136,37 @@
 
   function render(d) {
     var site = d.site || {};
+    var disciplines = d.disciplines || [];
+    var projects = d.projects || [];
+    disciplines.forEach(function (x) { labels[x.id] = x.label; });
 
     if (d.notice) { $('notice').textContent = d.notice; $('notice').hidden = false; }
 
-    document.title = (site.name || 'Portfolio') + ' | Roblox Portfolio';
+    document.title = (site.name ? site.name + ' | ' : '') + 'Portfolio';
     $('site-name').textContent = site.name || '';
     $('eyebrow').textContent = site.eyebrow || '';
     $('headline').textContent = site.headline || '';
     $('lede').textContent = site.lede || '';
     $('footer-left').textContent = site.footerLeft || '';
     $('footer-right').textContent = site.footerRight || '';
+
+    // Discipline tiles (click to filter the work below)
+    var tiles = $('disciplines');
+    disciplines.forEach(function (x) {
+      var n = projects.filter(function (p) { return (p.type || 'roblox') === x.id; }).length;
+      var t = el('button', 'tile');
+      t.type = 'button';
+      t.appendChild(el('b', null, x.label));
+      t.appendChild(el('span', 'blurb', x.blurb || ''));
+      t.appendChild(el('small', null, x.tools || ''));
+      t.appendChild(el('span', 'count', n + (n === 1 ? ' project' : ' projects')));
+      t.addEventListener('click', function () {
+        setFilter(x.id);
+        $('work').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      tiles.appendChild(t);
+    });
+    if (!disciplines.length) tiles.hidden = true;
 
     // Stats
     var stats = $('stats');
@@ -83,25 +178,22 @@
     });
     if (!(d.stats || []).length) stats.hidden = true;
 
-    // Projects
+    // Work grid
     var grid = $('grid');
-    (d.projects || []).forEach(function (p) { grid.appendChild(renderProject(p)); });
+    projects.forEach(function (p) {
+      var c = renderProject(p);
+      cards.push(c);
+      grid.appendChild(c);
+    });
 
     // Filters
     var fbox = $('filters');
-    var all = [{ id: 'all', label: 'All' }].concat(d.filters || []);
-    var cards = grid.querySelectorAll('.card');
-    all.forEach(function (f, i) {
+    [{ id: 'all', label: 'All' }].concat(disciplines).forEach(function (f) {
       var b = el('button', null, f.label);
       b.type = 'button';
-      b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
-      b.addEventListener('click', function () {
-        fbox.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-        cards.forEach(function (c) {
-          var cats = c.getAttribute('data-cat').split(' ');
-          c.hidden = !(f.id === 'all' || cats.indexOf(f.id) !== -1);
-        });
-      });
+      b.setAttribute('data-filter', f.id);
+      b.setAttribute('aria-pressed', f.id === 'all' ? 'true' : 'false');
+      b.addEventListener('click', function () { setFilter(f.id); });
       fbox.appendChild(b);
     });
 
@@ -165,7 +257,7 @@
       box.appendChild(el('strong', null, 'The portfolio data could not be loaded. '));
       box.appendChild(document.createTextNode(
         'Check that projects.json is next to index.html and has no typos (a missing comma or quote breaks it). ' +
-        'If you opened index.html by double-clicking it, run it through a local server or view the published site instead. Details: ' + err.message
+        'If you opened index.html by double-clicking it, view the published site instead. Details: ' + err.message
       ));
       document.querySelector('.wrap').insertBefore(box, document.querySelector('main'));
     });

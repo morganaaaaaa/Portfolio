@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roblox Portfolio</title>
-<meta name="description" content="Portfolio of Roblox building, 3D modeling, animation and UI work.">
+<title>Portfolio</title>
+<meta name="description" content="Portfolio of Roblox development, digital art and music.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -15,7 +15,7 @@
 
 <div class="wrap">
   <header class="top">
-    <a class="mark" href="#top"><i></i><span id="site-name">YourName</span></a>
+    <a class="mark" href="#top"><i></i><span id="site-name"></span></a>
     <nav aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#skills">Skills</a>
@@ -35,12 +35,14 @@
       </div>
     </div>
 
+    <div class="disciplines" id="disciplines" aria-label="Disciplines"></div>
+
     <div class="stats" id="stats" aria-label="Highlights"></div>
 
     <section id="work">
       <div class="sec-head">
         <h2>Selected work</h2>
-        <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+        <div class="filters" id="filters" role="group" aria-label="Filter work"></div>
       </div>
       <div class="grid" id="grid"></div>
     </section>
@@ -69,6 +71,14 @@
     <span id="footer-right"></span>
   </footer>
 </div>
+
+<dialog id="lightbox" aria-label="Artwork">
+  <img id="lightbox-img" alt="">
+  <div class="lightbox-bar">
+    <span id="lightbox-caption"></span>
+    <button type="button" id="lightbox-close">Close</button>
+  </div>
+</dialog>
 
 <script src="app.js"></script>
 </body>

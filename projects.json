@@ -1,12 +1,12 @@
 {
-  "notice": "Sample content. Replace the names, numbers and links with your own.",
+  "notice": "I am constantly trying to update the content on this site, thanks!",
   "site": {
-    "name": "YourName",
-    "eyebrow": "Roblox builder · 3D artist · UI designer",
+    "name": "saintsblades",
+    "eyebrow": "Roblox developer, musical and digital artist",
     "headline": "Worlds, assets and interfaces for Roblox games.",
     "lede": "I build environments in Roblox Studio, model and animate custom assets, and design game UI that reads clearly on phone, console and PC. Open for commissions and long-term team work.",
-    "footerLeft": "© 2026 YourName",
-    "footerRight": "Built with Roblox Studio and Blender"
+    "footerLeft": "© 2026 saintsblades",
+    "footerRight": "Created with Roblox Studio, Blender, FL Studio, and Procreate"
   },
   "stats": [
     { "value": "4 yrs", "label": "In Roblox Studio" },

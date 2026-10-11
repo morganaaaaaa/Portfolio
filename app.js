@@ -227,6 +227,20 @@
     var at = $('about-text');
     (about.paragraphs || []).forEach(function (t) { at.appendChild(el('p', null, t)); });
 
+    // Off the clock
+    var fun = d.fun || {};
+    if ((fun.items || []).length) {
+      $('fun').hidden = false;
+      $('fun-title').textContent = fun.title || 'Off the clock';
+      $('fun-intro').textContent = fun.intro || '';
+      fun.items.forEach(function (it) {
+        var c = el('div', 'fun-item');
+        c.appendChild(el('small', null, it.label));
+        c.appendChild(el('span', null, it.value));
+        $('fun-list').appendChild(c);
+      });
+    }
+
     // Contact
     var cl = $('contact-list');
     (d.contact || []).forEach(function (c) {

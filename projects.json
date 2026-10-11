@@ -190,6 +190,16 @@
       "Write a few sentences here about how your Roblox work, music and art fit together, and what a client can expect from you."
     ]
   },
+  "fun": {
+    "title": "Off the clock",
+    "intro": "The stuff that doesn't fit in a portfolio category.",
+    "items": [
+      { "label": "Co-developer", "value": "My cat, who regularly adds code to my keyboard." },
+      { "label": "Listening to", "value": "Edit this: what's on repeat lately?" },
+      { "label": "Playing", "value": "Edit this: games you play when you're not building them." },
+      { "label": "Fun fact", "value": "Edit this: something people wouldn't guess about you." }
+    ]
+  },
   "contact": [
     { "label": "Discord", "value": "saintsblades", "type": "copy" },
     { "label": "Roblox profile", "value": "saintsblades", "type": "link", "href": "https://www.roblox.com/users/164709248/profile", "linkText": "Open profile" },

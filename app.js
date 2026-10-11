@@ -55,11 +55,12 @@
 
     if (p.image) {
       var src = safeUrl(p.image);
+      shot.className += ' has-img';
       var img = el('img');
       img.src = src;
       img.alt = p.title || '';
       img.loading = 'lazy';
-      if (type === 'art') {
+      if (type === 'art' || type === 'roblox') {
         var zoom = el('button', 'zoom');
         zoom.type = 'button';
         zoom.setAttribute('aria-label', 'View ' + (p.title || 'artwork') + ' larger');

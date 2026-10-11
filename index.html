@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roblox Portfolio</title>
+<meta name="description" content="Portfolio of Roblox building, 3D modeling, animation and UI work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="notice" id="notice" hidden></div>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top"><i></i><span id="site-name">YourName</span></a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <p class="eyebrow" id="eyebrow"></p>
+      <h1 id="headline"></h1>
+      <p class="lede" id="lede"></p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="stats" id="stats" aria-label="Highlights"></div>
+
+    <section id="work">
+      <div class="sec-head">
+        <h2>Selected work</h2>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="skills">
+      <div class="sec-head"><h2>Skills and tools</h2></div>
+      <div class="skills" id="skills-list"></div>
+    </section>
+
+    <section id="about">
+      <div class="sec-head"><h2>About</h2></div>
+      <div class="about">
+        <div class="commissions" id="commissions"></div>
+        <div id="about-text"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sec-head"><h2>Contact</h2></div>
+      <div class="contact-list" id="contact-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footer-left"></span>
+    <span id="footer-right"></span>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+{
+  "notice": "Sample content. Replace the names, numbers and links with your own.",
+  "site": {
+    "name": "YourName",
+    "eyebrow": "Roblox builder · 3D artist · UI designer",
+    "headline": "Worlds, assets and interfaces for Roblox games.",
+    "lede": "I build environments in Roblox Studio, model and animate custom assets, and design game UI that reads clearly on phone, console and PC. Open for commissions and long-term team work.",
+    "footerLeft": "© 2026 YourName",
+    "footerRight": "Built with Roblox Studio and Blender"
+  },
+  "stats": [
+    { "value": "4 yrs", "label": "In Roblox Studio" },
+    { "value": "18", "label": "Shipped places" },
+    { "value": "2.4M", "label": "Total visits" },
+    { "value": "9", "label": "Dev teams" }
+  ],
+  "filters": [
+    { "id": "build", "label": "Building" },
+    { "id": "model", "label": "Modeling" },
+    { "id": "anim", "label": "Animation" },
+    { "id": "ui", "label": "UI" }
+  ],
+  "projects": [
+    {
+      "title": "Harbor Town",
+      "categories": ["build"],
+      "tags": ["Building", "Lighting"],
+      "description": "Seaside hub map for a roleplay game, with 14 enterable interiors and a day/night lighting cycle.",
+      "meta": "Map: 1,024 × 1,024 studs",
+      "linkText": "Play on Roblox",
+      "linkUrl": "https://www.roblox.com",
+      "image": "",
+      "tint": "a"
+    },
+    {
+      "title": "Weapon Pack Vol. 1",
+      "categories": ["model"],
+      "tags": ["Modeling", "Blender"],
+      "description": "Twelve low-poly melee and ranged weapons with hand-painted textures, ready to drop into any combat system.",
+      "meta": "Under 2,000 tris each",
+      "linkText": "View in Toolbox",
+      "linkUrl": "https://create.roblox.com/store",
+      "image": "",
+      "tint": "b"
+    },
+    {
+      "title": "Pet Sim Inventory",
+      "categories": ["ui"],
+      "tags": ["UI", "Figma"],
+      "description": "Inventory, shop and trading screens that scale from a phone to a 4K monitor without clipping.",
+      "meta": "Mobile-first layout",
+      "linkText": "Play on Roblox",
+      "linkUrl": "https://www.roblox.com",
+      "image": "",
+      "tint": "c"
+    },
+    {
+      "title": "Boss Fight Cinematic",
+      "categories": ["anim"],
+      "tags": ["Animation", "Moon Animator"],
+      "description": "A 40-second cutscene with a rigged boss, camera work and synced sound effects.",
+      "meta": "R15 and custom rig",
+      "linkText": "Watch on YouTube",
+      "linkUrl": "https://www.youtube.com",
+      "image": "",
+      "tint": "a"
+    },
+    {
+      "title": "Frostpeak Lobby",
+      "categories": ["build", "model"],
+      "tags": ["Building", "Modeling"],
+      "description": "Winter lobby with modeled props, snow particle effects and a spawn area built for 50-player servers.",
+      "meta": "Streaming enabled",
+      "linkText": "Play on Roblox",
+      "linkUrl": "https://www.roblox.com",
+      "image": "",
+      "tint": "b"
+    },
+    {
+      "title": "Obby HUD Redesign",
+      "categories": ["ui"],
+      "tags": ["UI", "Game design"],
+      "description": "Checkpoint timer, stage counter and settings menu. Retention on the first session rose after the update.",
+      "meta": "Before and after",
+      "linkText": "Case study",
+      "linkUrl": "#",
+      "image": "",
+      "tint": "c"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Building",
+      "sub": "Roblox Studio",
+      "items": [
+        { "name": "Terrain and landscaping", "level": "Expert" },
+        { "name": "Interior and architecture", "level": "Expert" },
+        { "name": "Lighting and atmosphere", "level": "Advanced" },
+        { "name": "Part count optimization", "level": "Advanced" }
+      ]
+    },
+    {
+      "group": "Modeling and animation",
+      "sub": "Blender, Moon Animator",
+      "items": [
+        { "name": "Low-poly props and assets", "level": "Expert" },
+        { "name": "Texturing", "level": "Advanced" },
+        { "name": "Rigging", "level": "Intermediate" },
+        { "name": "Cutscenes", "level": "Advanced" }
+      ]
+    },
+    {
+      "group": "UI and game design",
+      "sub": "Figma, Roblox UI",
+      "items": [
+        { "name": "HUD and menu layouts", "level": "Expert" },
+        { "name": "Responsive scaling", "level": "Advanced" },
+        { "name": "Game loop design", "level": "Advanced" },
+        { "name": "Playtesting", "level": "Advanced" }
+      ]
+    }
+  ],
+  "about": {
+    "available": true,
+    "availableText": "Taking commissions",
+    "availableNote": "Typical turnaround is 1 to 3 weeks depending on scope. Payment in Robux or USD.",
+    "paragraphs": [
+      "I started building in Roblox Studio in 2022 and have worked with small teams and solo developers ever since. I care most about maps that guide players without signs and interfaces that stay readable on a small screen.",
+      "Write a few sentences here about how you work, the kinds of games you like making, and what a client can expect from you."
+    ]
+  },
+  "contact": [
+    { "label": "Discord", "value": "yourname", "type": "copy" },
+    { "label": "Email", "value": "you@example.com", "type": "copy" },
+    { "label": "Roblox profile", "value": "roblox.com/users/your-id", "type": "link", "href": "https://www.roblox.com", "linkText": "Open profile" }
+  ]
+}

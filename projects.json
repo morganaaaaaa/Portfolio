@@ -4,18 +4,19 @@
     "name": "saintsblades",
     "eyebrow": "Roblox developer · digital artist · musician",
     "headline": "Roblox worlds, digital art and original music.",
-    "lede": "I build games and environments in Roblox Studio, paint digital art in Procreate, and produce music in FL Studio. Open for commissions in all three.",
+    "lede": "I build games and environments in Roblox Studio, paint digital art in Procreate, and produce music in FL Studio.",
     "footerLeft": "© 2026 saintsblades",
     "footerRight": "Created with Roblox Studio, Blender, FL Studio, and Procreate"
   },
   "disciplines": [
     { "id": "roblox", "label": "Roblox", "blurb": "Building, modeling, animation and UI for games.", "tools": "Roblox Studio · Blender" },
-    { "id": "music", "label": "Music", "blurb": "Original songs and game soundtracks. 37K monthly listeners on Spotify.", "tools": "FL Studio", "linkText": "Listen on Spotify", "linkUrl": "https://open.spotify.com" },
+    { "id": "music", "label": "Music", "blurb": "Songs that I created, heavily inspired by many artists including Sewerslvt, eightiesheadachetape, usedcvnt, etc. 37K monthly listeners on Spotify. All songs are based nearly or directly on my life.", "tools": "FL Studio", "linkText": "Listen on Spotify", "linkUrl": "https://open.spotify.com/artist/5oD48NiKyvnA0H3WUtk10t?si=LEC0aLRKSx669ErNhgLpVQ" },
     { "id": "art", "label": "Digital art", "blurb": "Illustration, character design and game thumbnails.", "tools": "Procreate" }
   ],
   "stats": [
-    { "value": "4 yrs", "label": "In Roblox Studio" },
-    { "value": "18", "label": "Shipped places" },
+    { "value": "3 years", "label": "In Roblox Studio coding with Luau" },
+    { "value": "2", "label": "Shipped places" },
+    { "value": "1M+", "label": "Visits on Roblox" },
     { "value": "37K", "label": "Spotify monthly listeners" },
     { "value": "40", "label": "Songs" }
   ],
@@ -94,11 +95,11 @@
       "type": "music",
       "title": "When I jump, I will be free",
       "tags": ["Latest release"],
-      "description": "A new era for me",
-      "meta": "New",
+      "description": "A new era for me, the times are changing and so must I. I have to take a leap into this new world, and soon all that I know will be left behind",
+      "meta": "released on 10/5/26",
       "audio": "",
       "embed": "",
-      "linkText": "Listen on Spotify",
+      "linkText": "Link",
       "linkUrl": "https://open.spotify.com/album/1LaBMnIblU4oADRzhxUWby?si=272QeAyhTxW2dQ__koURrg",
       "image": "images/newest-release.jpg",
       "tint": "c"
@@ -179,10 +180,9 @@
     ]
   },
   "contact": [
-    { "label": "Discord", "value": "yourname", "type": "copy" },
-    { "label": "Email", "value": "you@example.com", "type": "copy" },
-    { "label": "Roblox profile", "value": "roblox.com/users/your-id", "type": "link", "href": "https://www.roblox.com", "linkText": "Open profile" },
-    { "label": "Spotify", "value": "open.spotify.com/artist/your-id", "type": "link", "href": "https://open.spotify.com", "linkText": "Open Spotify" },
-    { "label": "Art", "value": "instagram.com/your-name", "type": "link", "href": "https://www.instagram.com", "linkText": "Open profile" }
+    { "label": "Discord", "value": "saintsblades", "type": "copy" },
+    { "label": "Roblox profile", "value": "saintsblades", "type": "link", "href": "https://www.roblox.com/users/164709248/profile", "linkText": "Open profile" },
+    { "label": "Spotify", "value": "Heavenly Snow", "type": "link", "href": "https://open.spotify.com/artist/5oD48NiKyvnA0H3WUtk10t?si=LEC0aLRKSx669ErNhgLpVQ", "linkText": "Open Spotify" },
+    { "label": "Art", "value": "My tiktok was taken down :(" }
   ]
 }

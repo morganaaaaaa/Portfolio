@@ -28,9 +28,9 @@
     return '';
   }
 
-  var labels = {};
-  var cards = [];
-  var current = 'all';
+  function externalLink(a) {
+    if (/^https?:/i.test(a.href)) { a.target = '_blank'; a.rel = 'noopener'; }
+  }
 
   // Lightbox for artwork
   var dlg = $('lightbox');
@@ -49,11 +49,9 @@
   function renderProject(p) {
     var type = p.type || 'roblox';
     var card = el('article', 'card ' + type);
-    card.setAttribute('data-type', type);
 
     var tint = p.tint === 'b' ? ' b' : p.tint === 'c' ? ' c' : '';
     var shot = el('div', 'shot' + tint);
-    shot.appendChild(el('em', 'badge', labels[type] || type));
 
     if (p.image) {
       var src = safeUrl(p.image);
@@ -109,22 +107,12 @@
     if (p.linkText && p.linkUrl) {
       var l = el('a', null, p.linkText);
       l.href = safeUrl(p.linkUrl);
-      if (/^https?:/i.test(l.href)) { l.target = '_blank'; l.rel = 'noopener'; }
+      externalLink(l);
       meta.appendChild(l);
     }
     body.appendChild(meta);
     card.appendChild(body);
     return card;
-  }
-
-  function setFilter(id) {
-    current = id;
-    document.querySelectorAll('#filters button').forEach(function (b) {
-      b.setAttribute('aria-pressed', b.getAttribute('data-filter') === id ? 'true' : 'false');
-    });
-    cards.forEach(function (c) {
-      c.hidden = !(id === 'all' || c.getAttribute('data-type') === id);
-    });
   }
 
   function copyText(text, btn) {
@@ -138,7 +126,7 @@
     var site = d.site || {};
     var disciplines = d.disciplines || [];
     var projects = d.projects || [];
-    disciplines.forEach(function (x) { labels[x.id] = x.label; });
+    var sections = {};
 
     if (d.notice) { $('notice').textContent = d.notice; $('notice').hidden = false; }
 
@@ -150,7 +138,35 @@
     $('footer-left').textContent = site.footerLeft || '';
     $('footer-right').textContent = site.footerRight || '';
 
-    // Discipline tiles (click to filter the work below)
+    // One stacked section per discipline, in the order listed in "disciplines"
+    var secBox = $('sections');
+    disciplines.forEach(function (x) {
+      var sec = el('section');
+      sec.id = x.id;
+      sections[x.id] = sec;
+
+      var head = el('div', 'sec-head');
+      var left = el('div', 'sec-title');
+      left.appendChild(el('h2', null, x.label));
+      if (x.blurb) left.appendChild(el('p', 'sec-blurb', x.blurb));
+      head.appendChild(left);
+      if (x.linkText && x.linkUrl) {
+        var b = el('a', 'btn', x.linkText);
+        b.href = safeUrl(x.linkUrl);
+        externalLink(b);
+        head.appendChild(b);
+      }
+      sec.appendChild(head);
+
+      var grid = el('div', 'grid');
+      projects.forEach(function (p) {
+        if ((p.type || 'roblox') === x.id) grid.appendChild(renderProject(p));
+      });
+      sec.appendChild(grid);
+      secBox.appendChild(sec);
+    });
+
+    // Tiles under the intro jump to each section
     var tiles = $('disciplines');
     disciplines.forEach(function (x) {
       var n = projects.filter(function (p) { return (p.type || 'roblox') === x.id; }).length;
@@ -161,8 +177,7 @@
       t.appendChild(el('small', null, x.tools || ''));
       t.appendChild(el('span', 'count', n + (n === 1 ? ' project' : ' projects')));
       t.addEventListener('click', function () {
-        setFilter(x.id);
-        $('work').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sections[x.id].scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
       tiles.appendChild(t);
     });
@@ -177,25 +192,6 @@
       stats.appendChild(box);
     });
     if (!(d.stats || []).length) stats.hidden = true;
-
-    // Work grid
-    var grid = $('grid');
-    projects.forEach(function (p) {
-      var c = renderProject(p);
-      cards.push(c);
-      grid.appendChild(c);
-    });
-
-    // Filters
-    var fbox = $('filters');
-    [{ id: 'all', label: 'All' }].concat(disciplines).forEach(function (f) {
-      var b = el('button', null, f.label);
-      b.type = 'button';
-      b.setAttribute('data-filter', f.id);
-      b.setAttribute('aria-pressed', f.id === 'all' ? 'true' : 'false');
-      b.addEventListener('click', function () { setFilter(f.id); });
-      fbox.appendChild(b);
-    });
 
     // Skills
     var sk = $('skills-list');

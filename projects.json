@@ -10,14 +10,14 @@
   },
   "disciplines": [
     { "id": "roblox", "label": "Roblox", "blurb": "Building, modeling, animation and UI for games.", "tools": "Roblox Studio · Blender" },
-    { "id": "art", "label": "Digital art", "blurb": "Illustration, character design and game thumbnails.", "tools": "Procreate" },
-    { "id": "music", "label": "Music", "blurb": "Game soundtracks, loops and original tracks.", "tools": "FL Studio" }
+    { "id": "music", "label": "Music", "blurb": "Original songs and game soundtracks. 37K monthly listeners on Spotify.", "tools": "FL Studio", "linkText": "Listen on Spotify", "linkUrl": "https://open.spotify.com" },
+    { "id": "art", "label": "Digital art", "blurb": "Illustration, character design and game thumbnails.", "tools": "Procreate" }
   ],
   "stats": [
     { "value": "4 yrs", "label": "In Roblox Studio" },
     { "value": "18", "label": "Shipped places" },
-    { "value": "120+", "label": "Finished artworks" },
-    { "value": "40", "label": "Tracks produced" }
+    { "value": "37K", "label": "Spotify monthly listeners" },
+    { "value": "40", "label": "Songs" }
   ],
   "projects": [
     {
@@ -65,6 +65,45 @@
       "tint": "a"
     },
     {
+      "type": "music",
+      "title": "Will you leave me?",
+      "tags": ["Most played"],
+      "description": "My most played song, with over a million plays.",
+      "meta": "1.2M plays",
+      "audio": "",
+      "embed": "",
+      "linkText": "Listen on Spotify",
+      "linkUrl": "https://open.spotify.com",
+      "image": "",
+      "tint": "a"
+    },
+    {
+      "type": "music",
+      "title": "Girl next door",
+      "tags": ["2nd most played"],
+      "description": "My second most played song.",
+      "meta": "500K plays",
+      "audio": "",
+      "embed": "",
+      "linkText": "Listen on Spotify",
+      "linkUrl": "https://open.spotify.com",
+      "image": "",
+      "tint": "b"
+    },
+    {
+      "type": "music",
+      "title": "Your newest release",
+      "tags": ["Latest release"],
+      "description": "Replace this card with the title and a short description of your newest song.",
+      "meta": "New",
+      "audio": "",
+      "embed": "",
+      "linkText": "Listen on Spotify",
+      "linkUrl": "https://open.spotify.com",
+      "image": "",
+      "tint": "c"
+    },
+    {
       "type": "art",
       "title": "Night Market",
       "tags": ["Illustration", "Procreate"],
@@ -96,45 +135,6 @@
       "linkUrl": "https://www.roblox.com",
       "image": "",
       "tint": "a"
-    },
-    {
-      "type": "music",
-      "title": "Frostpeak Theme",
-      "tags": ["Game soundtrack", "FL Studio"],
-      "description": "Looping lobby theme with bells and soft synth pads, written for a winter map.",
-      "meta": "128 BPM · D minor · 2:40",
-      "audio": "",
-      "embed": "",
-      "linkText": "Listen on SoundCloud",
-      "linkUrl": "https://soundcloud.com",
-      "image": "",
-      "tint": "b"
-    },
-    {
-      "type": "music",
-      "title": "Neon Harbor",
-      "tags": ["Synthwave", "FL Studio"],
-      "description": "A night-drive track with a driving bassline and a long synth lead.",
-      "meta": "118 BPM · A minor · 3:15",
-      "audio": "",
-      "embed": "",
-      "linkText": "Listen on SoundCloud",
-      "linkUrl": "https://soundcloud.com",
-      "image": "",
-      "tint": "a"
-    },
-    {
-      "type": "music",
-      "title": "Boss Fight Loop",
-      "tags": ["Hybrid orchestral", "FL Studio"],
-      "description": "A tense, percussive loop built to repeat cleanly for the length of a boss fight.",
-      "meta": "150 BPM · F minor · 1:30 loop",
-      "audio": "",
-      "embed": "",
-      "linkText": "Listen on SoundCloud",
-      "linkUrl": "https://soundcloud.com",
-      "image": "",
-      "tint": "c"
     }
   ],
   "skills": [
@@ -149,6 +149,16 @@
       ]
     },
     {
+      "group": "Music production",
+      "sub": "FL Studio",
+      "items": [
+        { "name": "Songwriting", "level": "Advanced" },
+        { "name": "Game soundtracks", "level": "Advanced" },
+        { "name": "Sound design", "level": "Intermediate" },
+        { "name": "Mixing and mastering", "level": "Intermediate" }
+      ]
+    },
+    {
       "group": "Digital art",
       "sub": "Procreate",
       "items": [
@@ -156,16 +166,6 @@
         { "name": "Character design", "level": "Advanced" },
         { "name": "Game thumbnails and icons", "level": "Expert" },
         { "name": "Color and lighting", "level": "Advanced" }
-      ]
-    },
-    {
-      "group": "Music production",
-      "sub": "FL Studio",
-      "items": [
-        { "name": "Game soundtracks", "level": "Advanced" },
-        { "name": "Loops and ambience", "level": "Advanced" },
-        { "name": "Sound design", "level": "Intermediate" },
-        { "name": "Mixing and mastering", "level": "Intermediate" }
       ]
     }
   ],
@@ -175,14 +175,14 @@
     "availableNote": "Typical turnaround is 1 to 3 weeks depending on scope. Payment in Robux or USD.",
     "paragraphs": [
       "I started building in Roblox Studio in 2022 and have worked with small teams and solo developers ever since. I care most about maps that guide players without signs and interfaces that stay readable on a small screen.",
-      "Write a few sentences here about how your Roblox work, art and music fit together, and what a client can expect from you."
+      "Write a few sentences here about how your Roblox work, music and art fit together, and what a client can expect from you."
     ]
   },
   "contact": [
     { "label": "Discord", "value": "yourname", "type": "copy" },
     { "label": "Email", "value": "you@example.com", "type": "copy" },
     { "label": "Roblox profile", "value": "roblox.com/users/your-id", "type": "link", "href": "https://www.roblox.com", "linkText": "Open profile" },
-    { "label": "Music", "value": "soundcloud.com/your-name", "type": "link", "href": "https://soundcloud.com", "linkText": "Open SoundCloud" },
+    { "label": "Spotify", "value": "open.spotify.com/artist/your-id", "type": "link", "href": "https://open.spotify.com", "linkText": "Open Spotify" },
     { "label": "Art", "value": "instagram.com/your-name", "type": "link", "href": "https://www.instagram.com", "linkText": "Open profile" }
   ]
 }

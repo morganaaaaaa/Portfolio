@@ -101,6 +101,8 @@ section { padding-block: 64px 8px; }
 .sec-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
 h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -0.025em; font-weight: 700; margin: 0; line-height: 1.15; }
 
+.sec-title { min-width: 0; }
+.sec-blurb { margin: 8px 0 0; color: var(--muted); max-width: 52ch; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .filters button {
   font: 500 13px/1 var(--font-mono);

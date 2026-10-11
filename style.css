@@ -154,6 +154,19 @@ h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -0.025em; font-weigh
 #roblox .grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); }
 #roblox .grid .card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
+/* Work tabs */
+.tabs { display: flex; gap: 4px; margin-top: 48px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tabs button {
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  font: 500 15px/1 var(--font-body); padding: 14px 18px; margin-bottom: -1px;
+  background: none; border: 0; border-bottom: 2px solid transparent;
+  color: var(--muted); cursor: pointer;
+}
+.tabs button:hover { color: var(--fg); }
+.tabs button[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); }
+.tabs .n { font: 500 11px/1 var(--font-mono); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 7px; }
+.work section { padding-block: 40px 8px; }
+
 /* Artwork lightbox */
 dialog { background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 10px; padding: 12px; max-width: min(92vw, 1000px); }
 dialog::backdrop { background: rgba(0, 0, 0, 0.78); }

@@ -1,6 +1,7 @@
 // Builds the whole page from projects.json. You normally only edit that file.
 (function () {
-  function $(id) { return document.getElementById(id); }
+  // Missing elements get a throwaway div, so an out-of-date page can never crash the script
+  function $(id) { return document.getElementById(id) || document.createElement('div'); }
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -126,6 +127,7 @@
   function render(d) {
     var site = d.site || {};
     var disciplines = d.disciplines || [];
+    var secEls = {};
     var projects = d.projects || [];
 
     if (d.notice) { $('notice').textContent = d.notice; $('notice').hidden = false; }
@@ -162,8 +164,31 @@
         if ((p.type || 'roblox') === x.id) grid.appendChild(renderProject(p));
       });
       sec.appendChild(grid);
+      secEls[x.id] = sec;
       secBox.appendChild(sec);
     });
+
+    // Tabs: "All" shows the sections stacked in order, a tab shows only that section
+    var tabsBox = $('tabs');
+    var tabBtns = [];
+    function showTab(id) {
+      tabBtns.forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-tab') === id ? 'true' : 'false'); });
+      disciplines.forEach(function (x) { secEls[x.id].hidden = !(id === 'all' || id === x.id); });
+    }
+    [{ id: 'all', label: 'All' }].concat(disciplines).forEach(function (x) {
+      var b = el('button', null, x.label);
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('data-tab', x.id);
+      if (x.id !== 'all') {
+        var n = projects.filter(function (p) { return (p.type || 'roblox') === x.id; }).length;
+        b.appendChild(el('span', 'n', String(n)));
+      }
+      b.addEventListener('click', function () { showTab(x.id); });
+      tabsBox.appendChild(b);
+      tabBtns.push(b);
+    });
+    showTab('all');
 
     // Stats
     var stats = $('stats');
@@ -224,19 +249,22 @@
     });
   }
 
+  function fail(msg, err) {
+    var box = el('div', 'load-error');
+    box.appendChild(el('strong', null, msg));
+    box.appendChild(document.createTextNode('Details: ' + (err && err.message ? err.message : err)));
+    document.querySelector('.wrap').insertBefore(box, document.querySelector('main'));
+  }
+
   fetch('projects.json', { cache: 'no-cache' })
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
-    .then(render)
-    .catch(function (err) {
-      var box = el('div', 'load-error');
-      box.appendChild(el('strong', null, 'The portfolio data could not be loaded. '));
-      box.appendChild(document.createTextNode(
-        'Check that projects.json is next to index.html and has no typos (a missing comma or quote breaks it). ' +
-        'If you opened index.html by double-clicking it, view the published site instead. Details: ' + err.message
-      ));
-      document.querySelector('.wrap').insertBefore(box, document.querySelector('main'));
+    .then(function (d) {
+      try { render(d); } catch (e) { fail('The page hit a problem while building itself. Try a hard refresh (Ctrl+Shift+R). ', e); }
+    })
+    .catch(function (e) {
+      fail('The portfolio data could not be loaded. Check that projects.json is next to index.html and has no typos (a missing comma or quote breaks it). ', e);
     });
 })();

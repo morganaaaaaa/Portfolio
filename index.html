@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="notice" id="notice" hidden></div>
@@ -17,9 +17,8 @@
   <header class="top">
     <a class="mark" href="#top"><i></i><span id="site-name"></span></a>
     <nav aria-label="Sections">
-      <a href="#roblox">Roblox</a>
-      <a href="#music">Music</a>
-      <a href="#art">Art</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -31,14 +30,16 @@
       <h1 id="headline"></h1>
       <p class="lede" id="lede"></p>
       <div class="cta">
-        <a class="btn primary" href="#roblox">See my work</a>
-        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn primary" href="#contact">Get in touch</a>
       </div>
     </div>
 
     <div class="stats" id="stats" aria-label="Highlights"></div>
 
-    <div id="sections"></div>
+    <div class="work" id="work">
+      <div class="tabs" id="tabs" role="tablist" aria-label="Choose what to view"></div>
+      <div id="sections"></div>
+    </div>
 
     <section id="skills">
       <div class="sec-head"><h2>Skills and tools</h2></div>
@@ -73,6 +74,6 @@
   </div>
 </dialog>
 
-<script src="app.js"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

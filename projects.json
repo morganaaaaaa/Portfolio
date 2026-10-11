@@ -23,7 +23,7 @@
   "projects": [
     {
       "type": "roblox",
-      "title": "Dusk Street",
+      "title": "Marleyan Homes",
       "tags": ["Building", "Lighting"],
       "description": "Stone townhouses with shuttered windows, dormers and chimneys along a cobblestone street at dusk, with market tents and utility poles.",
       "meta": "Roblox Studio",
@@ -36,15 +36,15 @@
       "type": "roblox",
       "title": "Winter's End Holiday Card",
       "tags": ["Event art"],
-      "description": "Holiday card dated December 24th, 1918, with characters gathered around a lit Christmas tree.",
-      "meta": "December 24th, 1918",
+      "description": "Holiday card for fictional holiday "Winter's End", celebrated on the day before Christmas with my team and players!!!",
+      "meta": "Special Card",
       "linkText": "",
       "linkUrl": "",
       "image": "images/roblox-winters-end-card.jpg",
       "tint": "b"
     },
     {
-      "type": "roblox",
+      "type": "Marleyan Homes V2",
       "title": "Townhouse Street, Daytime",
       "tags": ["Building"],
       "description": "A row of townhouses in daylight, with sandbag barricades, lamp posts and utility poles.",

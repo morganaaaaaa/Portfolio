@@ -73,7 +73,7 @@
       "audio": "",
       "embed": "",
       "linkText": "Listen on Spotify",
-      "linkUrl": "https://open.spotify.com",
+      "linkUrl": "https://open.spotify.com/album/3S3I3tUEAVRGQ0WwoByxcE?si=EgEwtiyTT3SDRgQeh3wSzg",
       "image": "",
       "tint": "a"
     },
@@ -86,20 +86,20 @@
       "audio": "",
       "embed": "",
       "linkText": "Listen on Spotify",
-      "linkUrl": "https://open.spotify.com",
+      "linkUrl": "https://open.spotify.com/album/6PWVNo1LTu8YbxjjErM1IY?si=KWli0VONTkODxaOiiOuPWg",
       "image": "",
       "tint": "b"
     },
     {
       "type": "music",
-      "title": "Your newest release",
+      "title": "When I jump, I will be free",
       "tags": ["Latest release"],
-      "description": "Replace this card with the title and a short description of your newest song.",
+      "description": "Newest release!",
       "meta": "New",
       "audio": "",
       "embed": "",
       "linkText": "Listen on Spotify",
-      "linkUrl": "https://open.spotify.com",
+      "linkUrl": "https://open.spotify.com/album/1LaBMnIblU4oADRzhxUWby?si=272QeAyhTxW2dQ__koURrg",
       "image": "",
       "tint": "c"
     },

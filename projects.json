@@ -11,7 +11,7 @@
   "disciplines": [
     { "id": "roblox", "label": "Roblox", "blurb": "Building, modeling, animation and UI for games.", "tools": "Roblox Studio · Blender" },
     { "id": "music", "label": "Music", "blurb": "Songs that I created, heavily inspired by many artists including Sewerslvt, eightiesheadachetape, usedcvnt, etc. 37K monthly listeners on Spotify. All songs are based nearly or directly on my life.", "tools": "FL Studio", "linkText": "Listen on Spotify", "linkUrl": "https://open.spotify.com/artist/5oD48NiKyvnA0H3WUtk10t?si=LEC0aLRKSx669ErNhgLpVQ" },
-    { "id": "art", "label": "Digital art", "blurb": "Illustration, character design and game thumbnails.", "tools": "Procreate" }
+    { "id": "art", "label": "Digital art", "blurb": "Illustration, character design and game thumbnails. Could you tell I have a favorite character?", "tools": "Procreate" }
   ],
   "stats": [
     { "value": "3 years", "label": "In Roblox Studio coding with Luau" },
@@ -106,7 +106,7 @@
       "type": "music",
       "title": "When I jump, I will be free",
       "tags": ["Latest release"],
-      "description": "A new era for me, the times are changing and so must I. I have to take a leap into this new world, and soon all that I know will be left behind",
+      "description": "A new era for me, the times are changing and I do too. We have to take a leap into this new world, and soon all that I know will be left behind",
       "meta": "released on 10/5/26",
       "audio": "",
       "embed": "",
@@ -117,9 +117,9 @@
     },
     {
       "type": "art",
-      "title": "Sandrone Meme Animation",
+      "title": "Sandrone Animation"
       "tags": ["Animation", "TikTok"],
-      "description": "A meme animation of Sandrone from Genshin Impact.",
+      "description": "An animation based on 'Looping the Rooms'",
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
@@ -129,9 +129,9 @@
     },
     {
       "type": "art",
-      "title": "Animation 2",
+      "title": "Sandrone Animation 2",
       "tags": ["Animation", "TikTok"],
-      "description": "Edit this: a line about this animation.",
+      "description": "As in the video, an animation for 'Hazy Moon Jumpstyle'",
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
@@ -141,9 +141,9 @@
     },
     {
       "type": "art",
-      "title": "Animation 3",
+      "title": "Sandrone Animation 3",
       "tags": ["Animation", "TikTok"],
-      "description": "Edit this: a line about this animation.",
+      "description": "One of my favorite songs, this animation is based off of 'Bad Apple'",
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",

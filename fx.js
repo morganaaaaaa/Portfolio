@@ -13,8 +13,8 @@
   function build() {
     layer.textContent = '';
     var vw = window.innerWidth;
-    var side = (vw - CONTENT) / 2;          // free space on each side of the content
-    if (side < 56) return;                  // no real margin (phones, small windows): stay calm
+    if (vw < 700) return;                   // phones: stay calm
+    var side = Math.max(64, (vw - CONTENT) / 2);   // free space on each side (a thin edge strip on narrow windows)
 
     function xIn(width) {                   // a random x inside the left or right margin
       var room = Math.max(0, side - width - 8);
@@ -32,7 +32,7 @@
     }
 
     // Glowing butterflies: rise, sway and flap
-    var count = Math.min(22, Math.round(side / 22));
+    var count = Math.max(6, Math.min(22, Math.round(side / 22)));
     for (var j = 0; j < count; j++) {
       var size = rand(24, Math.min(80, side * 0.7));
       var sway = Math.min(36, side * 0.22);

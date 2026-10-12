@@ -247,3 +247,10 @@ h2::before { content: "\2726"; color: var(--accent); font-size: 0.5em; margin-ri
 .tabs button[aria-selected="true"] { border-bottom-color: var(--accent); }
 .mark i { background: var(--burgundy); border: 1px solid var(--accent); }
 .mark i::after { background: var(--bg); }
+
+/* Digital art: show every piece in full, in a staggered layout */
+.card.art .shot.has-img { aspect-ratio: auto; display: block; }
+.card.art .shot.has-img img { position: static; height: auto; width: 100%; display: block; }
+.card.art .shot.has-img .zoom { position: static; width: 100%; height: auto; display: block; }
+#art .grid { display: block; column-width: 300px; column-gap: 24px; }
+#art .grid .card { break-inside: avoid; margin-bottom: 24px; display: flex; }

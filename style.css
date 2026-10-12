@@ -399,3 +399,27 @@ h2::before, .eyebrow, .eyebrow::before { text-shadow: 0 0 14px rgba(255, 190, 80
   text-shadow: 0 0 22px rgba(255, 190, 80, 0.45);
   padding-left: 16px; border-left: 2px solid var(--burgundy);
 }
+
+/* Art placements */
+.hero-art {
+  position: absolute; right: 0; top: -6px; width: clamp(220px, 31vw, 400px); height: auto; aspect-ratio: 1; pointer-events: none;
+  filter: drop-shadow(0 0 28px rgba(255, 176, 60, 0.28)) drop-shadow(0 0 60px rgba(190, 28, 48, 0.18));
+}
+@media (max-width: 800px) { .hero-art { width: 150px; top: -10px; opacity: .9; } }
+
+.me-photo.has-img { aspect-ratio: auto; display: block; border-color: var(--accent); box-shadow: 0 0 34px rgba(255, 176, 60, 0.16); position: relative; }
+.me-photo.has-img img { height: auto; width: 100%; object-fit: initial; }
+
+.closing { position: relative; margin: 96px 0 0; border: 1px solid var(--burgundy); overflow: hidden; background: #0f0c0e; }
+.closing img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: 50% 24%; }
+.closing::before, .closing::after { content: ""; position: absolute; width: 22px; height: 22px; border: 0 solid var(--accent); z-index: 2; pointer-events: none; }
+.closing::before { top: 10px; left: 10px; border-top-width: 1px; border-left-width: 1px; }
+.closing::after { bottom: 10px; right: 10px; border-bottom-width: 1px; border-right-width: 1px; }
+.closing { box-shadow: 0 0 40px rgba(255, 176, 60, 0.10); }
+.closing + footer { margin-top: 40px; }
+.hero-art { top: 22px; -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 100%); mask-image: linear-gradient(to bottom, #000 74%, transparent 100%); }
+.closing img { height: auto; }
+@media (max-width: 800px) {
+  .hero-art { position: static; display: block; width: 170px; margin: 0 0 14px auto; }
+  .hero { padding-top: 24px; }
+}

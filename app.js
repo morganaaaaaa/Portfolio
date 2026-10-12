@@ -313,6 +313,7 @@
         var pi = el('img');
         pi.src = safeUrl(fun.image);
         pi.alt = fun.imageAlt || 'Photo';
+        ph.classList.add('has-img');
         ph.appendChild(pi);
       } else {
         ph.appendChild(el('span', null, 'Your photo here'));

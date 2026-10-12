@@ -174,7 +174,7 @@
 
       var head = el('div', 'sec-head');
       var left = el('div', 'sec-title');
-      left.appendChild(el('h2', null, x.label));
+      left.appendChild(el('h2', null, x.heading || x.label));
       if (x.blurb) left.appendChild(el('p', 'sec-blurb', x.blurb));
       head.appendChild(left);
       if (x.linkText && x.linkUrl) {

@@ -9,9 +9,9 @@
     "footerRight": "Created with Roblox Studio, Blender, FL Studio, and Procreate"
   },
   "disciplines": [
-    { "id": "roblox", "label": "Roblox", "blurb": "Building, modeling, animation and UI for games.", "tools": "Roblox Studio · Blender" },
-    { "id": "music", "label": "Music", "blurb": "Songs that I created, heavily inspired by many artists including Sewerslvt, eightiesheadachetape, usedcvnt, etc. 37K monthly listeners on Spotify. All songs are based nearly or directly on my life.", "tools": "FL Studio", "linkText": "Listen on Spotify", "linkUrl": "https://open.spotify.com/artist/5oD48NiKyvnA0H3WUtk10t?si=LEC0aLRKSx669ErNhgLpVQ" },
-    { "id": "art", "label": "Digital art", "blurb": "Illustration, character design and game thumbnails. Could you tell I have a favorite character?", "tools": "Procreate" }
+    { "id": "roblox", "label": "Roblox", "heading": "The Workshop", "blurb": "Building, modeling, animation and UI for games.", "tools": "Roblox Studio · Blender" },
+    { "id": "music", "label": "Music", "heading": "The Studio", "blurb": "Songs that I created, heavily inspired by many artists including Sewerslvt, eightiesheadachetape, usedcvnt, etc. 37K monthly listeners on Spotify. All songs are based nearly or directly on my life.", "tools": "FL Studio", "linkText": "Listen on Spotify", "linkUrl": "https://open.spotify.com/artist/5oD48NiKyvnA0H3WUtk10t?si=LEC0aLRKSx669ErNhgLpVQ" },
+    { "id": "art", "label": "Digital art", "heading": "The Gallery", "blurb": "Illustration, character design and game thumbnails. Could you tell I have a favorite character?", "tools": "Procreate" }
   ],
   "stats": [
     { "value": "3 years", "label": "In Roblox Studio coding with Luau" },
@@ -194,7 +194,7 @@
     ]
   },
   "fun": {
-    "title": "About me",
+    "title": "The Resident",
     "image": "",
     "imageAlt": "Photo of me",
     "bio": [

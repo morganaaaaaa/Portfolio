@@ -3,7 +3,7 @@
   "site": {
     "name": "saintsblades",
     "eyebrow": "Roblox developer · digital artist · musician",
-    "headline": "Roblox worlds, digital art and original music.",
+    "headline": "A virtuoso, in gold and shadow."
     "lede": "I build games and environments in Roblox Studio, paint digital art in Procreate, and produce music in FL Studio.",
     "footerLeft": "© 2026 saintsblades",
     "footerRight": "Created with Roblox Studio, Blender, FL Studio, and Procreate"
@@ -106,7 +106,7 @@
       "type": "music",
       "title": "When I jump, I will be free",
       "tags": ["Latest release"],
-      "description": "A new era for me, the times are changing and I do too. We have to take a leap into this new world, and soon all that I know will be left behind",
+      "description": "A new era for me, the times are changing and I will too. We have to take a leap into this new world, and soon all that I know will be left behind",
       "meta": "released on 10/5/26",
       "audio": "",
       "embed": "",
@@ -186,11 +186,10 @@
   ],
   "about": {
     "available": true,
-    "availableText": "Taking commissions",
-    "availableNote": "Typical turnaround is 1 to 3 weeks depending on scope. Payment in Robux or USD.",
+    "availableText": "NOT currently taking commissions.. sorry!",
+    "availableNote": "When active, I usually get work done in 1-3 weeks, and take payments in Robux.",
     "paragraphs": [
-      "I started building in Roblox Studio in 2022 and have worked with small teams and solo developers ever since. I care most about maps that guide players without signs and interfaces that stay readable on a small screen.",
-      "Write a few sentences here about how your Roblox work, music and art fit together, and what a client can expect from you."
+      "I started building in Roblox Studio in 2022 and got heavily involved in closed community games with small teams and solo developers ever since. I care about lore writing, portray settings best to the theme of the story, and immersing players into lore."
     ]
   },
   "fun": {
@@ -198,14 +197,14 @@
     "image": "images/beatrice-glow.jpg",
     "imageAlt": "Golden butterflies",
     "bio": [
-      "Write a few sentences about yourself here: who you are, where you're from, and what got you into building, music and art.",
-      "Add a second paragraph if you want, or delete this line."
+      "Hey! My name is Ayden, and I'm from San Francisco, California, USA. Ever since I was a child, I was obssessed with playing Roblox everyday, and eventually I grew into wanting to create my own games, so I opened up the studio and it branched from there on. Musically and artistically, I've always been quite skilled. Playing the piano since I was a young child has given me musical ability from a young age, and as I grow older, I am inspired by my life and surroundings, allowing me to put my heart into music. On the other hand, I love to draw what I see and I love to draw what I literally love.",
+      "Outside of the arts, I'm a student obsessed with STEM too! Writing code and building machines was actually not my first interest, but I quickly learned it's my better skill.. I'm also a club swimmer and water polo player."
     ],
     "items": [
       { "label": "Hobbies", "value": "I enjoy reading visual novels, manga, and playing Roblox all the time!" },
       { "label": "Listening to", "value": "fakemink, Ado, feng, sewerslvt, and a fuck ton of instrumental" },
       { "label": "Playing", "value": "roblox, specifically ANIME BATTLE ARENA!!!! also playing a good amount of project zomboid" },
-      { "label": "Fun fact", "value": "Outside of being a hikikomori, I play water polo, and was ranked top 300 in the nation last year!" }
+      { "label": "Fun fact", "value": "Outside of being a hikikomori, I play water polo for my school, and was ranked top 300 in the nation last year!" }
     ]
   },
   "contact": [

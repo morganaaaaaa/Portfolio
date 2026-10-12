@@ -378,3 +378,16 @@ h2::before, .eyebrow, .eyebrow::before { text-shadow: 0 0 14px rgba(255, 190, 80
 .stat b { text-shadow: 0 0 22px rgba(255, 190, 80, 0.35); }
 .card:hover { box-shadow: 0 0 26px rgba(255, 176, 60, 0.14); }
 .btn:hover { box-shadow: 0 0 22px rgba(255, 176, 60, 0.25); }
+
+/* Custom clip player */
+.clip-wrap { position: relative; cursor: pointer; background: #000; border-bottom: 1px solid var(--burgundy); line-height: 0; }
+.clip-wrap .clip { border-bottom: 0; width: 100%; height: auto; display: block; }
+.clip-icon { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; border: 1px solid var(--accent); background: rgba(23, 20, 22, 0.62); opacity: 0; transition: opacity .2s; pointer-events: none; box-shadow: 0 0 24px rgba(255, 176, 60, 0.25); }
+.clip-icon::before { content: ""; position: absolute; left: 25px; top: 19px; border-left: 18px solid var(--accent); border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+.clip-wrap.paused .clip-icon { opacity: 1; }
+.clip-sound { position: absolute; right: 10px; bottom: 14px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--burgundy); background: rgba(23, 20, 22, 0.7); color: var(--muted); font: 16px/1 var(--font-body); cursor: pointer; opacity: 0; transition: opacity .2s, color .2s, border-color .2s; line-height: 30px; padding: 0; text-align: center; }
+.clip-wrap:hover .clip-sound, .clip-sound:focus-visible, .clip-sound.on { opacity: 1; }
+.clip-sound.on { color: var(--accent); border-color: var(--accent); }
+.clip-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(104, 45, 58, 0.55); }
+.clip-bar i { display: block; height: 100%; width: 0; background: var(--accent); box-shadow: 0 0 8px rgba(255, 176, 60, 0.6); }
+@media (hover: none) { .clip-sound { opacity: 1; } }

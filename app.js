@@ -47,6 +47,63 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   }
 
+  // Custom looping clip: no browser controls. Click to pause/play, small sound toggle, thin progress line.
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clipObserver = ('IntersectionObserver' in window) ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      var v = en.target;
+      if (en.isIntersecting) {
+        if (!v._userPaused && !reduceMotion) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
+      } else {
+        v.pause();
+      }
+    });
+  }, { threshold: 0.4 }) : null;
+
+  function buildClip(src, p) {
+    var wrap = el('div', 'clip-wrap');
+    var v = el('video', 'clip');
+    v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'metadata';
+    v.setAttribute('playsinline', '');
+    v.src = src;
+    if (p.image) v.poster = safeUrl(p.image);
+    v.setAttribute('aria-label', p.title || 'Animation');
+    wrap.appendChild(v);
+
+    var icon = el('span', 'clip-icon');
+    icon.setAttribute('aria-hidden', 'true');
+    wrap.appendChild(icon);
+
+    var sound = el('button', 'clip-sound');
+    sound.type = 'button';
+    sound.setAttribute('aria-label', 'Turn sound on');
+    sound.textContent = '\u266A';
+    sound.addEventListener('click', function (e) {
+      e.stopPropagation();
+      v.muted = !v.muted;
+      sound.classList.toggle('on', !v.muted);
+      sound.setAttribute('aria-label', v.muted ? 'Turn sound on' : 'Turn sound off');
+    });
+    wrap.appendChild(sound);
+
+    var bar = el('span', 'clip-bar');
+    var fill = el('i');
+    bar.appendChild(fill);
+    wrap.appendChild(bar);
+
+    function sync() { wrap.classList.toggle('paused', v.paused); }
+    v.addEventListener('play', sync);
+    v.addEventListener('pause', sync);
+    v.addEventListener('timeupdate', function () { if (v.duration) fill.style.width = (v.currentTime / v.duration * 100) + '%'; });
+    wrap.addEventListener('click', function () {
+      if (v.paused) { v._userPaused = false; var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
+      else { v._userPaused = true; v.pause(); }
+    });
+    wrap.classList.add('paused');
+    if (clipObserver) clipObserver.observe(v);
+    return wrap;
+  }
+
   function renderProject(p) {
     var type = p.type || 'roblox';
     var card = el('article', 'card ' + type);
@@ -79,15 +136,7 @@
     var vsrc = p.video ? safeUrl(p.video) : '';
     var vframe = type !== 'music' ? embedUrl(p.embed) : '';
     if (vsrc && vsrc !== '#') {
-      var v = el('video', 'clip');
-      v.controls = true;
-      v.muted = true;
-      v.loop = true;
-      v.playsInline = true;
-      v.preload = 'metadata';
-      v.src = vsrc;
-      if (p.image) v.poster = safeUrl(p.image);
-      card.appendChild(v);
+      card.appendChild(buildClip(vsrc, p));
       shot.hidden = true;
     } else if (vframe) {
       var vf = el('iframe', 'embed clip-embed');

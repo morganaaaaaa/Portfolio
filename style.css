@@ -1,17 +1,18 @@
 :root {
-  --bg: #0f1218;
-  --surface: #161b24;
-  --fg: #eceff5;
-  --muted: #9aa3b5;
-  --line: #272e3b;
-  --accent: #6f94ff;
-  --accent-fg: #0b1020;
-  --stud: #2a3240;
-  --tint-a: #1b2540;
-  --tint-b: #17302a;
-  --tint-c: #2e261d;
-  --good: #3ecf8e;
-  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --bg: #171416;
+  --surface: #1f1a1d;
+  --fg: #E8DDC8;
+  --muted: #777078;
+  --line: #3b232b;
+  --burgundy: #682D3A;
+  --accent: #B49A70;
+  --accent-fg: #171416;
+  --stud: #2a2125;
+  --tint-a: #2a1a20;
+  --tint-b: #221c24;
+  --tint-c: #2b241d;
+  --good: #B49A70;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   color-scheme: dark;
@@ -231,3 +232,18 @@ footer { margin-block: 72px 0; padding-block: 28px; border-top: 1px solid var(--
 .me-text h2 { margin-bottom: 16px; }
 .me-text p { margin: 0 0 14px; max-width: 62ch; color: var(--muted); }
 .me-text .fun-list { margin-top: 22px; }
+
+/* Mansion palette details */
+.btn { border-color: var(--burgundy); }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--burgundy); color: var(--fg); border-color: var(--burgundy); }
+.btn.primary:hover { background: #7d3646; filter: none; }
+h1, h2, .mark { font-family: var(--font-display); }
+h1 { font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-weight: 700; font-size: clamp(1.9rem, 4.5vw, 2.6rem); }
+h2::before { content: "\2726"; color: var(--accent); font-size: 0.5em; margin-right: 12px; vertical-align: middle; }
+.card, .stats, .commissions, .contact-item, .fun-item, .me-photo { border-color: var(--burgundy); }
+.stats, .tabs, footer, .meta, .skills li { border-color: var(--burgundy); }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--accent); }
+.mark i { background: var(--burgundy); border: 1px solid var(--accent); }
+.mark i::after { background: var(--bg); }

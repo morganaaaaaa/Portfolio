@@ -20,7 +20,7 @@
   }
 
   // Only embed players from music and video sites.
-  var EMBED_HOSTS = ['open.spotify.com', 'w.soundcloud.com', 'www.youtube.com', 'www.youtube-nocookie.com', 'bandcamp.com'];
+  var EMBED_HOSTS = ['open.spotify.com', 'w.soundcloud.com', 'www.youtube.com', 'www.youtube-nocookie.com', 'bandcamp.com', 'www.tiktok.com'];
   function embedUrl(u) {
     try {
       var x = new URL(String(u || '').trim());
@@ -75,6 +75,32 @@
       shot.appendChild(el('span', null, type === 'art' ? 'Artwork' : type === 'music' ? 'Cover art' : 'Screenshot'));
     }
     card.appendChild(shot);
+    // Animations: a video file (mp4/webm) or a TikTok / YouTube embed
+    var vsrc = p.video ? safeUrl(p.video) : '';
+    var vframe = type !== 'music' ? embedUrl(p.embed) : '';
+    if (vsrc && vsrc !== '#') {
+      var v = el('video', 'clip');
+      v.controls = true;
+      v.muted = true;
+      v.loop = true;
+      v.playsInline = true;
+      v.preload = 'metadata';
+      v.src = vsrc;
+      if (p.image) v.poster = safeUrl(p.image);
+      card.appendChild(v);
+      shot.hidden = true;
+    } else if (vframe) {
+      var vf = el('iframe', 'embed clip-embed');
+      vf.src = vframe;
+      vf.title = (p.title || 'Video') + ' player';
+      vf.loading = 'lazy';
+      vf.height = String(p.embedHeight || 740);
+      vf.setAttribute('allow', 'encrypted-media; fullscreen');
+      vf.setAttribute('allowfullscreen', '');
+      vf.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups allow-presentation');
+      card.appendChild(vf);
+      shot.hidden = true;
+    }
 
     var body = el('div', 'body');
     var tags = el('div', 'tags');

@@ -254,3 +254,7 @@ h2::before { content: "\2726"; color: var(--accent); font-size: 0.5em; margin-ri
 .card.art .shot.has-img .zoom { position: static; width: 100%; height: auto; display: block; }
 #art .grid { display: block; column-width: 300px; column-gap: 24px; }
 #art .grid .card { break-inside: avoid; margin-bottom: 24px; display: flex; }
+
+/* Animations and videos */
+.clip { display: block; width: 100%; height: auto; background: #000; border-bottom: 1px solid var(--burgundy); }
+.clip-embed { display: block; width: 100%; border: 0; background: #000; border-bottom: 1px solid var(--burgundy); }

@@ -117,36 +117,39 @@
     },
     {
       "type": "art",
-      "title": "Night Market",
-      "tags": ["Illustration", "Procreate"],
-      "description": "A rainy street market lit by paper lanterns, painted for a game's loading screen.",
-      "meta": "3000 × 4000 px · 2026",
+      "title": "Sandrone Meme Animation",
+      "tags": ["Animation", "TikTok"],
+      "description": "A meme animation of Sandrone from Genshin Impact.",
+      "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "",
-      "tint": "c"
+      "image": "images/anim-sandrone.jpg",
+      "video": "images/anim-sandrone.mp4",
+      "tint": "a"
     },
     {
       "type": "art",
-      "title": "Character Sheet: Kael",
-      "tags": ["Character design", "Procreate"],
-      "description": "Front, side and back views plus expression sheet for a swordsman character.",
-      "meta": "4000 × 3000 px · 2026",
+      "title": "Animation 2",
+      "tags": ["Animation", "TikTok"],
+      "description": "Edit this: a line about this animation.",
+      "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "",
+      "image": "images/anim-two.jpg",
+      "video": "images/anim-two.mp4",
       "tint": "b"
     },
     {
       "type": "art",
-      "title": "Game Thumbnail Set",
-      "tags": ["Thumbnails", "Branding"],
-      "description": "Thumbnails and icons for three Roblox games, made to stay readable at small sizes.",
-      "meta": "1920 × 1080 px each",
-      "linkText": "See the games",
-      "linkUrl": "https://www.roblox.com",
-      "image": "",
-      "tint": "a"
+      "title": "Animation 3",
+      "tags": ["Animation", "TikTok"],
+      "description": "Edit this: a line about this animation.",
+      "meta": "Animation",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/anim-three.jpg",
+      "video": "images/anim-three.mp4",
+      "tint": "c"
     }
   ],
   "skills": [

@@ -417,7 +417,11 @@ h2::before, .eyebrow, .eyebrow::before { text-shadow: 0 0 14px rgba(255, 190, 80
 .closing::after { bottom: 10px; right: 10px; border-bottom-width: 1px; border-right-width: 1px; }
 .closing { box-shadow: 0 0 40px rgba(255, 176, 60, 0.10); }
 .closing + footer { margin-top: 40px; }
-.hero-art { top: 22px; -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 100%); mask-image: linear-gradient(to bottom, #000 74%, transparent 100%); }
+.hero-art { top: 22px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 14%, #000 70%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 78%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 14%, #000 70%, transparent 100%);
+  mask-composite: intersect; }
 .closing img { height: auto; }
 @media (max-width: 800px) {
   .hero-art { position: static; display: block; width: 170px; margin: 0 0 14px auto; }

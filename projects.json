@@ -209,6 +209,7 @@
     { "label": "Discord", "value": "saintsblades", "type": "copy" },
     { "label": "Roblox profile", "value": "saintsblades", "type": "link", "href": "https://www.roblox.com/users/164709248/profile", "linkText": "Open profile" },
     { "label": "Spotify", "value": "Heavenly Snow", "type": "link", "href": "https://open.spotify.com/artist/5oD48NiKyvnA0H3WUtk10t?si=LEC0aLRKSx669ErNhgLpVQ", "linkText": "Open Spotify" },
+    { "label": "Linkedin", "value": "Linkedin", "type": "link", "href": "https://www.linkedin.com/in/ayden-trinh-02183a349/", "linkText": "Open Linkedin" },
     { "label": "Art", "value": "My tiktok was taken down :(" }
   ]
 }

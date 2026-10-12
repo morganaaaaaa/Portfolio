@@ -391,3 +391,11 @@ h2::before, .eyebrow, .eyebrow::before { text-shadow: 0 0 14px rgba(255, 190, 80
 .clip-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(104, 45, 58, 0.55); }
 .clip-bar i { display: block; height: 100%; width: 0; background: var(--accent); box-shadow: 0 0 8px rgba(255, 176, 60, 0.6); }
 @media (hover: none) { .clip-sound { opacity: 1; } }
+
+/* Emphatic note under a section blurb */
+.sec-note {
+  margin: 14px 0 0; font-family: var(--font-display); font-style: italic; font-weight: 700;
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem); line-height: 1.2; color: var(--accent);
+  text-shadow: 0 0 22px rgba(255, 190, 80, 0.45);
+  padding-left: 16px; border-left: 2px solid var(--burgundy);
+}

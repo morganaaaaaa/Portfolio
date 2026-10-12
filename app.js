@@ -225,6 +225,7 @@
       var left = el('div', 'sec-title');
       left.appendChild(el('h2', null, x.heading || x.label));
       if (x.blurb) left.appendChild(el('p', 'sec-blurb', x.blurb));
+      if (x.note) left.appendChild(el('p', 'sec-note', x.note));
       head.appendChild(left);
       if (x.linkText && x.linkUrl) {
         var b = el('a', 'btn', x.linkText);

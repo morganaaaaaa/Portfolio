@@ -325,3 +325,56 @@ footer { position: relative; border-top: 1px solid var(--burgundy); margin-top: 
 footer::before { content: ""; position: absolute; left: 50%; top: -7px; width: 13px; height: 13px; transform: translateX(-50%) rotate(45deg); background: var(--bg); border: 1px solid var(--accent); }
 .me-text h2 { display: flex; align-items: center; gap: 16px; }
 .me-text h2::before { margin-right: 0; }
+
+/* ===== Golden butterflies, bokeh and the red rose ===== */
+body {
+  background:
+    radial-gradient(ellipse 70% 45% at 88% 4%, rgba(176, 124, 34, 0.22) 0%, rgba(176, 124, 34, 0) 70%),
+    radial-gradient(ellipse 60% 40% at 8% 100%, rgba(104, 45, 58, 0.30) 0%, rgba(104, 45, 58, 0) 70%),
+    #0f0c0e;
+  background-attachment: fixed;
+}
+.wrap, .notice { position: relative; z-index: 1; }
+
+.fx { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.orb {
+  position: absolute; left: var(--x); top: var(--y); width: var(--s); height: var(--s); border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 196, 92, 0.95) 0%, rgba(255, 160, 40, 0.45) 40%, rgba(255, 140, 20, 0) 72%);
+  opacity: var(--a); filter: blur(1.5px);
+  animation: orbFloat var(--d) ease-in-out var(--delay) infinite alternate, orbPulse var(--t) ease-in-out var(--delay) infinite alternate;
+}
+@keyframes orbFloat { from { transform: translate(0, 0); } to { transform: translate(24px, -70px); } }
+@keyframes orbPulse { from { opacity: calc(var(--a) * 0.35); } to { opacity: var(--a); } }
+
+.bf { position: absolute; left: var(--x); top: 0; width: var(--w); animation: bfRise var(--d) linear var(--delay) infinite; will-change: transform; }
+.bf-sway { animation: bfSway var(--sw) ease-in-out infinite alternate; }
+.bf-wings {
+  display: block; width: 100%; height: auto; overflow: visible; transform-origin: 50% 55%;
+  filter: drop-shadow(0 0 5px rgba(255, 196, 80, 0.95)) drop-shadow(0 0 16px rgba(255, 150, 30, 0.55));
+  animation: bfFlap var(--fl) ease-in-out infinite alternate;
+}
+@keyframes bfRise { from { transform: translateY(108vh); } to { transform: translateY(-16vh); } }
+@keyframes bfSway { from { transform: translateX(calc(var(--dx) * -1)) rotate(calc(var(--r) * -1)); } to { transform: translateX(var(--dx)) rotate(var(--r)); } }
+@keyframes bfFlap { from { transform: scaleX(1); } to { transform: scaleX(0.38); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .bf { animation: none; top: var(--y); }
+  .bf-sway, .bf-wings, .orb { animation: none; }
+}
+
+/* roses */
+.mark-rose { width: 30px; height: 30px; flex: none; filter: drop-shadow(0 0 6px rgba(200, 30, 50, 0.6)); }
+.mark i { display: none; }
+.hero::after { display: none; }
+.hero-rose {
+  position: absolute; right: 2%; top: 4px; width: clamp(110px, 17vw, 190px); height: auto; aspect-ratio: 1;
+  transform: rotate(14deg); pointer-events: none;
+  filter: drop-shadow(0 0 14px rgba(190, 28, 48, 0.55)) drop-shadow(0 0 40px rgba(190, 28, 48, 0.25));
+}
+@media (max-width: 800px) { .hero-rose { width: 86px; right: 0; top: -6px; } }
+
+/* warm glow on gold details */
+h2::before, .eyebrow, .eyebrow::before { text-shadow: 0 0 14px rgba(255, 190, 80, 0.55); }
+.stat b { text-shadow: 0 0 22px rgba(255, 190, 80, 0.35); }
+.card:hover { box-shadow: 0 0 26px rgba(255, 176, 60, 0.14); }
+.btn:hover { box-shadow: 0 0 22px rgba(255, 176, 60, 0.25); }

@@ -8,14 +8,51 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="roseGrad" cx="50%" cy="45%" r="62%">
+      <stop offset="0" stop-color="#e03348"/><stop offset=".55" stop-color="#a51628"/><stop offset="1" stop-color="#5a0a15"/>
+    </radialGradient>
+    <linearGradient id="wingGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE9A3"/><stop offset=".6" stop-color="#FFC85A"/><stop offset="1" stop-color="#E8962A"/>
+    </linearGradient>
+    <symbol id="rose" viewBox="0 0 100 100">
+      <path d="M50 70 C48 82 46 92 44 100" stroke="#1f3a2a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse cx="30" cy="80" rx="13" ry="6" transform="rotate(-28 30 80)" fill="#24432f"/>
+      <ellipse cx="68" cy="84" rx="13" ry="6" transform="rotate(26 68 84)" fill="#1d3826"/>
+      <g stroke="#4a0812" stroke-width=".8" fill="url(#roseGrad)">
+        <circle cx="50" cy="26" r="21"/><circle cx="68" cy="37" r="21"/><circle cx="68" cy="58" r="21"/>
+        <circle cx="50" cy="69" r="21"/><circle cx="32" cy="58" r="21"/><circle cx="32" cy="37" r="21"/>
+      </g>
+      <g stroke="#5a0a15" stroke-width=".8" fill="#b01a2d">
+        <circle cx="50" cy="38" r="15"/><circle cx="60" cy="48" r="15"/><circle cx="54" cy="60" r="15"/>
+        <circle cx="42" cy="58" r="15"/><circle cx="40" cy="45" r="15"/>
+      </g>
+      <circle cx="50" cy="50" r="12" fill="#c42035" stroke="#6b0c18" stroke-width=".8"/>
+      <path d="M50 50 m-3 0 a3 3 0 1 1 6 0 a6 6 0 1 1 -12 0 a9 9 0 1 1 18 0" fill="none" stroke="#6b0c18" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M36 30 C44 22 56 22 64 28" fill="none" stroke="#ff8a96" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="bf" viewBox="0 0 100 80">
+      <g fill="url(#wingGrad)" stroke="#FFF1C2" stroke-opacity=".7" stroke-width=".8" stroke-linejoin="round">
+        <path d="M50 38 C36 2 4 4 7 27 C9 43 34 47 50 38Z"/><path d="M50 38 C64 2 96 4 93 27 C91 43 66 47 50 38Z"/>
+        <path d="M50 41 C40 48 22 66 31 73 C40 77 48 60 50 46Z"/><path d="M50 41 C60 48 78 66 69 73 C60 77 52 60 50 46Z"/>
+      </g>
+      <g fill="none" stroke="#C98A1E" stroke-opacity=".55" stroke-width=".9" stroke-linecap="round">
+        <path d="M50 38 C38 26 24 18 14 18"/><path d="M50 38 C62 26 76 18 86 18"/><path d="M50 42 C42 52 36 62 33 68"/><path d="M50 42 C58 52 64 62 67 68"/>
+      </g>
+      <ellipse cx="50" cy="44" rx="1.8" ry="13" fill="#7a4a10"/>
+      <path d="M49 32 C46 24 43 20 39 17 M51 32 C54 24 57 20 61 17" stroke="#7a4a10" stroke-width="1" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
 <div class="notice" id="notice" hidden></div>
 
 <div class="wrap">
   <header class="top">
-    <a class="mark" href="#top"><i></i><span id="site-name"></span></a>
+    <a class="mark" href="#top"><svg class="mark-rose" aria-hidden="true"><use href="#rose"/></svg><span id="site-name"></span></a>
     <nav aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#skills">Skills</a>
@@ -26,6 +63,7 @@
 
   <main id="top">
     <div class="hero">
+      <svg class="hero-rose" aria-hidden="true"><use href="#rose"/></svg>
       <p class="eyebrow" id="eyebrow"></p>
       <h1 id="headline"></h1>
       <p class="lede" id="lede"></p>
@@ -84,5 +122,6 @@
 </dialog>
 
 <script src="app.js?v=7"></script>
+<script src="fx.js?v=2"></script>
 </body>
 </html>

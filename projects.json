@@ -286,9 +286,9 @@
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "images/anim-mitsuba-1.jpg",
-      "video": "images/anim-mitsuba-1.mp4",
-      "tint": "a"
+      "image": "images/anim-mitsuba-3.jpg",
+      "video": "images/anim-mitsuba-3.mp4",
+      "tint": "c"
     },
     {
       "type": "art",
@@ -298,9 +298,9 @@
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "images/anim-mitsuba-2.jpg",
-      "video": "images/anim-mitsuba-2.mp4",
-      "tint": "b"
+      "image": "images/anim-mitsuba-1.jpg",
+      "video": "images/anim-mitsuba-1.mp4",
+      "tint": "a"
     },
     {
       "type": "art",
@@ -310,9 +310,9 @@
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "images/anim-mitsuba-3.jpg",
-      "video": "images/anim-mitsuba-3.mp4",
-      "tint": "c"
+      "image": "images/anim-mitsuba-2.jpg",
+      "video": "images/anim-mitsuba-2.mp4",
+      "tint": "b"
     }
   ],
   "skills": [

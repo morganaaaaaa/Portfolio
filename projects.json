@@ -256,14 +256,14 @@
     },
     {
       "type": "art",
-      "title": "Sandrone Animation 2",
+      "title": "Mitsuba Animation 2",
       "tags": ["Animation", "TikTok"],
-      "description": "As in the video, an animation for 'Hazy Moon Jumpstyle'",
+      "description": "",
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "images/anim-two.jpg",
-      "video": "images/anim-two.mp4",
+      "image": "images/anim-mitsuba-2.jpg",
+      "video": "images/anim-mitsuba-2.mp4",
       "tint": "b"
     },
     {
@@ -292,14 +292,14 @@
     },
     {
       "type": "art",
-      "title": "Mitsuba Animation 2",
+      "title": "Sandrone Animation 2",
       "tags": ["Animation", "TikTok"],
-      "description": "",
+      "description": "As in the video, an animation for 'Hazy Moon Jumpstyle'",
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "images/anim-mitsuba-2.jpg",
-      "video": "images/anim-mitsuba-2.mp4",
+      "image": "images/anim-two.jpg",
+      "video": "images/anim-two.mp4",
       "tint": "b"
     },
     {

@@ -294,7 +294,7 @@
       "group": "Music production",
       "sub": "FL Studio",
       "items": [
-        { "name": "Songwriting", "level": "N/A, I only use samples, never my own voice (it's too deep)" },
+        { "name": "Songwriting", "level": "N/A" },
         { "name": "Sound design", "level": "Advanced" },
         { "name": "Mixing and mastering", "level": "Advanced" }
       ]
@@ -304,7 +304,7 @@
       "sub": "Procreate",
       "items": [
         { "name": "Illustration", "level": "Advanced" },
-        { "name": "Character design", "level": "N/A, rarely do I make any original characters" },
+        { "name": "Character design", "level": "N/A" },
         { "name": "Tweening and Animation", "level": "Advanced" }
       ]
     }

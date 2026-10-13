@@ -118,6 +118,10 @@
       img.src = src;
       img.alt = p.title || '';
       img.loading = 'lazy';
+      if (type === 'roblox') {
+        var markWide = function () { if (img.naturalWidth / img.naturalHeight >= 1.9) card.classList.add('wide'); };
+        if (img.complete && img.naturalWidth) markWide(); else img.addEventListener('load', markWide);
+      }
       if (type === 'art' || type === 'roblox') {
         var zoom = el('button', 'zoom');
         zoom.type = 'button';

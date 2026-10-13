@@ -427,3 +427,5 @@ h2::before, .eyebrow, .eyebrow::before { text-shadow: 0 0 14px rgba(255, 190, 80
   .hero-art { position: static; display: block; width: 170px; margin: 0 0 14px auto; }
   .hero { padding-top: 24px; }
 }
+
+#roblox .grid .card.wide { grid-column: 1 / -1; }

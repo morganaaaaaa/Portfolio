@@ -252,8 +252,8 @@ h2::before { content: "\2726"; color: var(--accent); font-size: 0.5em; margin-ri
 .card.art .shot.has-img { aspect-ratio: auto; display: block; }
 .card.art .shot.has-img img { position: static; height: auto; width: 100%; display: block; }
 .card.art .shot.has-img .zoom { position: static; width: 100%; height: auto; display: block; }
-#art .grid { display: block; column-width: 300px; column-gap: 24px; }
-#art .grid .card { break-inside: avoid; margin-bottom: 24px; display: flex; }
+#art .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px; align-items: start; }
+#art .grid .card { display: flex; }
 
 /* Animations and videos */
 .clip { display: block; width: 100%; height: auto; background: #000; border-bottom: 1px solid var(--burgundy); }

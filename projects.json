@@ -90,17 +90,6 @@
     },
     {
       "type": "roblox",
-      "title": "Classroom",
-      "tags": ["Building", "Interior"],
-      "description": "",
-      "meta": "Roblox Studio",
-      "linkText": "",
-      "linkUrl": "",
-      "image": "images/roblox-classroom.jpg",
-      "tint": "b"
-    },
-    {
-      "type": "roblox",
       "title": "Auditorium",
       "tags": ["Building", "Interior"],
       "description": "",
@@ -120,6 +109,17 @@
       "linkUrl": "",
       "image": "images/roblox-gymnasium.jpg",
       "tint": "a"
+    },
+    {
+      "type": "roblox",
+      "title": "Classroom",
+      "tags": ["Building", "Interior"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-classroom.jpg",
+      "tint": "b"
     },
     {
       "type": "roblox",

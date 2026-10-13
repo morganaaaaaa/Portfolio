@@ -256,15 +256,15 @@
     },
     {
       "type": "art",
-      "title": "Mitsuba Animation 2",
+      "title": "Mitsuba Animation 3",
       "tags": ["Animation", "TikTok"],
       "description": "",
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "images/anim-mitsuba-2.jpg",
-      "video": "images/anim-mitsuba-2.mp4",
-      "tint": "b"
+      "image": "images/anim-mitsuba-3.jpg",
+      "video": "images/anim-mitsuba-3.mp4",
+      "tint": "c"
     },
     {
       "type": "art",
@@ -304,15 +304,15 @@
     },
     {
       "type": "art",
-      "title": "Mitsuba Animation 3",
+      "title": "Mitsuba Animation 2",
       "tags": ["Animation", "TikTok"],
       "description": "",
       "meta": "Animation",
       "linkText": "",
       "linkUrl": "",
-      "image": "images/anim-mitsuba-3.jpg",
-      "video": "images/anim-mitsuba-3.mp4",
-      "tint": "c"
+      "image": "images/anim-mitsuba-2.jpg",
+      "video": "images/anim-mitsuba-2.mp4",
+      "tint": "b"
     }
   ],
   "skills": [

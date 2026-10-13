@@ -18,7 +18,8 @@
     { "value": "2", "label": "Shipped places" },
     { "value": "1M+", "label": "Visits on Roblox" },
     { "value": "37K", "label": "Spotify monthly listeners" },
-    { "value": "40", "label": "Songs" }
+    { "value": "19k", "label": "Repository Downloads"
+    { "value": "40", "label": "Songs created" }
   ],
   "projects": [
     {
@@ -197,14 +198,15 @@
     "image": "images/beatrice-glow.jpg",
     "imageAlt": "Golden butterflies",
     "bio": [
-      "Hey! My name is Ayden, and I'm from San Francisco, California, USA. Ever since I was a child, I was obssessed with playing Roblox everyday, and eventually I grew into wanting to create my own games, so I opened up the studio and it branched from there on. Musically and artistically, I've always been quite skilled. Playing the piano since I was a young child has given me musical ability from a young age, and as I grow older, I am inspired by my life and surroundings, allowing me to put my heart into music. On the other hand, I love to draw what I see and I love to draw what I literally love.",
+      "Hey! My name is Ayden, and I am currently located in San Francisco, California, USA. Ever since I was a child, I was obssessed with playing Roblox everyday, and eventually I grew into wanting to create my own games, so I opened up the studio and it branched from there on. Musically and artistically, I've always been quite skilled. Playing the piano since I was a young child has given me musical ability from a young age, and as I grow older, I am inspired by my life and surroundings, allowing me to put my heart into music. On the other hand, I love to draw what I see and I love to draw what I literally love.",
       "Outside of the arts, I'm a student obsessed with STEM too! Writing code and building machines was actually not my first interest, but I quickly learned it's my better skill.. I'm also a club swimmer and water polo player."
     ],
     "items": [
-      { "label": "Hobbies", "value": "I enjoy reading visual novels, manga, and playing Roblox all the time!" },
-      { "label": "Listening to", "value": "fakemink, Ado, feng, sewerslvt, and a fuck ton of instrumental" },
+      { "label": "Hobbies", "value": "I enjoy reading visual novels, manga, and doodling." },
+      { "label": "Goals", "value": "Hopefully, I can continue my education at Stanford University or MIT, and in the future, I will continue my development whether or not I attend those schools." },
+      { "label": "Listening to", "value": "some of my favs include fakemink, Ado, feng, sewerslvt, and a lot of random instrumentals or jpop" },
       { "label": "Playing", "value": "roblox, specifically ANIME BATTLE ARENA!!!! also playing a good amount of project zomboid" },
-      { "label": "Fun fact", "value": "Outside of being a hikikomori, I play water polo for my school, and was ranked top 300 in the nation last year!" }
+      { "label": "Fun fact", "value": "I am from Northern Vietnam, specifically Bac Giang Ward, Bach Nin City, Vietnam" }
     ]
   },
   "contact": [

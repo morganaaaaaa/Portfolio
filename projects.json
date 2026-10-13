@@ -18,7 +18,7 @@
     { "value": "2", "label": "Shipped places" },
     { "value": "1M+", "label": "Visits on Roblox" },
     { "value": "37K", "label": "Spotify monthly listeners" },
-    { "value": "19k", "label": "Repository Downloads"
+    { "value": "19k", "label": "Repository Downloads" },
     { "value": "40", "label": "Songs created" }
   ],
   "projects": [
@@ -76,6 +76,132 @@
       "linkUrl": "",
       "image": "images/roblox-harbor-docks.jpg",
       "tint": "b"
+    },
+    {
+      "type": "roblox",
+      "title": "Military Base",
+      "tags": ["Building", "Terrain"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-military-base.jpg",
+      "tint": "a"
+    },
+    {
+      "type": "roblox",
+      "title": "Classroom",
+      "tags": ["Building", "Interior"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-classroom.jpg",
+      "tint": "b"
+    },
+    {
+      "type": "roblox",
+      "title": "Auditorium",
+      "tags": ["Building", "Interior"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-auditorium.jpg",
+      "tint": "c"
+    },
+    {
+      "type": "roblox",
+      "title": "Gymnasium",
+      "tags": ["Building", "Interior"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-gymnasium.jpg",
+      "tint": "a"
+    },
+    {
+      "type": "roblox",
+      "title": "Mortar Tool",
+      "tags": ["Scripting"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-mortar-tool.jpg",
+      "tint": "b"
+    },
+    {
+      "type": "roblox",
+      "title": "Inventory UI",
+      "tags": ["UI"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-inventory-ui.jpg",
+      "tint": "c"
+    },
+    {
+      "type": "roblox",
+      "title": "Gameplay Clip 1",
+      "tags": ["Scripting", "Video"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-clip-1.jpg",
+      "video": "images/roblox-clip-1.mp4",
+      "tint": "b"
+    },
+    {
+      "type": "roblox",
+      "title": "Gameplay Clip 2",
+      "tags": ["Scripting", "Video"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-clip-2.jpg",
+      "video": "images/roblox-clip-2.mp4",
+      "tint": "c"
+    },
+    {
+      "type": "roblox",
+      "title": "Gameplay Clip 3",
+      "tags": ["Scripting", "Video"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-clip-3.jpg",
+      "video": "images/roblox-clip-3.mp4",
+      "tint": "a"
+    },
+    {
+      "type": "roblox",
+      "title": "Gameplay Clip 4",
+      "tags": ["Scripting", "Video"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-clip-4.jpg",
+      "video": "images/roblox-clip-4.mp4",
+      "tint": "b"
+    },
+    {
+      "type": "roblox",
+      "title": "Gameplay Clip 5",
+      "tags": ["Scripting", "Video"],
+      "description": "",
+      "meta": "Roblox Studio",
+      "linkText": "",
+      "linkUrl": "",
+      "image": "images/roblox-clip-5.jpg",
+      "video": "images/roblox-clip-5.mp4",
+      "tint": "c"
     },
     {
       "type": "music",

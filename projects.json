@@ -285,7 +285,7 @@
       "sub": "Roblox Studio, Blender, Moon Animator",
       "items": [
         { "name": "Environments and building", "level": "Expert" },
-        { "name": "Low-poly modeling", "level": "Advanced" },
+        { "name": "Coding", "level": "Intermediate" },
         { "name": "UI and game design", "level": "Advanced" },
         { "name": "Cutscenes and animation", "level": "Advanced" }
       ]
@@ -294,10 +294,9 @@
       "group": "Music production",
       "sub": "FL Studio",
       "items": [
-        { "name": "Songwriting", "level": "Advanced" },
-        { "name": "Game soundtracks", "level": "Advanced" },
-        { "name": "Sound design", "level": "Intermediate" },
-        { "name": "Mixing and mastering", "level": "Intermediate" }
+        { "name": "Songwriting", "level": "N/A, I only use samples, never my own voice (it's too deep)" },
+        { "name": "Sound design", "level": "Advanced" },
+        { "name": "Mixing and mastering", "level": "Advanced" }
       ]
     },
     {
@@ -305,9 +304,8 @@
       "sub": "Procreate",
       "items": [
         { "name": "Illustration", "level": "Advanced" },
-        { "name": "Character design", "level": "Advanced" },
-        { "name": "Game thumbnails and icons", "level": "Expert" },
-        { "name": "Color and lighting", "level": "Advanced" }
+        { "name": "Character design", "level": "N/A, rarely do I make any original characters" },
+        { "name": "Tweening and Animation", "level": "Advanced" }
       ]
     }
   ],

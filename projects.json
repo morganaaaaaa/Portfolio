@@ -15,10 +15,10 @@
   ],
   "stats": [
     { "value": "3 years", "label": "In Roblox Studio coding with Luau" },
-    { "value": "2", "label": "Shipped places" },
     { "value": "1M+", "label": "Visits on Roblox" },
     { "value": "37K", "label": "Spotify monthly listeners" },
-    { "value": "19k", "label": "Repository Downloads" },
+    { "value": "29K", "label": "Repository Downloads" }, 
+    { "value": "400K+", "label": "Extension Downloads" },
     { "value": "40", "label": "Songs created" }
   ],
   "projects": [
